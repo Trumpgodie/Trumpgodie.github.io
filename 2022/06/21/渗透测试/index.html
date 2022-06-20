@@ -6,13 +6,26 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="渗透测试学习过程梳理–20220514Section 1 渗透测试系统安装一、.kali系统安装1.1kali渗透测试系统简介Kali Linux是基于Debian的Linux发行版， 设计用于数字取证操作系统。每一季度更新一次。由Offensive Security Ltd维护和资助。最先由Offensive Security的Mati Aharoni和Devon Kearns通过重写Bac">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2022/06/21/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="渗透测试学习过程梳理–20220514Section 1 渗透测试系统安装一、.kali系统安装1.1kali渗透测试系统简介Kali Linux是基于Debian的Linux发行版， 设计用于数字取证操作系统。每一季度更新一次。由Offensive Security Ltd维护和资助。最先由Offensive Security的Mati Aharoni和Devon Kearns通过重写Bac">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220514100518890.png">
+<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220514114100415.png">
+<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220514114306649.png">
+<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220603155009987.png">
+<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220603155657146.png">
+<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220604073640372.png">
+<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220604073802835.png">
+<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220604083158137.png">
+<meta property="article:published_time" content="2022-06-20T17:55:54.434Z">
+<meta property="article:modified_time" content="2022-06-07T23:42:03.694Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220514100518890.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -69,9 +82,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-渗透测试" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-渗透测试" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/21/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="article-date">
   <time class="dt-published" datetime="2022-06-20T17:55:54.434Z" itemprop="datePublished">2022-06-21</time>
@@ -643,143 +654,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-nginx-with-rtmp-buiding" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/20/nginx-with-rtmp-buiding/" class="article-date">
-  <time class="dt-published" datetime="2022-06-20T14:02:13.000Z" itemprop="datePublished">2022-06-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/20/nginx-with-rtmp-buiding/">nginx with rtmp buiding</a>
-    </h1>
+    <a href="/2022/06/20/nginx-with-rtmp-buiding/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">nginx with rtmp buiding</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="nginx-编译支持rtmp直播模块"><a href="#nginx-编译支持rtmp直播模块" class="headerlink" title="nginx 编译支持rtmp直播模块"></a>nginx 编译支持rtmp直播模块</h1><p>Step 1 编译准备</p>
-<p>编译前的准备工作，是下载可用的编译源码，编译平台本文选择使用centos 进行编译</p>
-<p>.&#x2F;configure –builddir&#x3D;build –prefix&#x3D; <br>–conf-path&#x3D;conf&#x2F;nginx.conf –pid-path&#x3D;logs&#x2F;nginx.pid <br>–http-log-path&#x3D;logs&#x2F;access.log –error-log-path&#x3D;logs&#x2F;error.log <br>–sbin-path&#x3D;nginx.exe –http-client-body-temp-path&#x3D;temp&#x2F;client_body_temp <br>–http-proxy-temp-path&#x3D;temp&#x2F;proxy_temp <br>–http-fastcgi-temp-path&#x3D;temp&#x2F;fastcgi_temp <br>–with-cc-opt&#x3D;-DFD_SETSIZE&#x3D;1024 –with-pcre&#x3D;build&#x2F;lib&#x2F;pcre-8.39 <br>–with-zlib&#x3D;build&#x2F;lib&#x2F;zlib-1.2.8 –with-openssl&#x3D;build&#x2F;lib&#x2F;openssl-1.0.1s <br>–with-select_module –with-http_ssl_module –with-ipv6 <br>–with-http_sub_module <br>–add-module&#x3D;build&#x2F;lib&#x2F;nginx-rtmp-module</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/20/nginx-with-rtmp-buiding/" data-id="cl4n1j911000194ugfshvafbd" data-title="nginx with rtmp buiding" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version-0-1-0/" rel="tag">version 0.1.0</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-我的第一篇blog" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" class="article-date">
-  <time class="dt-published" datetime="2022-06-19T17:04:17.000Z" itemprop="datePublished">2022-06-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/">我的第一篇blog</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" data-id="cl4n1j912000294ug8fhs21q1" data-title="我的第一篇blog" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/19/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-06-19T15:45:31.794Z" itemprop="datePublished">2022-06-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/19/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/19/hello-world/" data-id="cl4n1j90x000094ughcs3ai5d" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>

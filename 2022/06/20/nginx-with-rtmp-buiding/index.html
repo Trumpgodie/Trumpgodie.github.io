@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Archives | Hexo</title>
+  <title>nginx with rtmp buiding | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="nginx 编译支持rtmp直播模块Step 1 编译准备 编译前的准备工作，是下载可用的编译源码，编译平台本文选择使用centos 进行编译 .&#x2F;configure –builddir&#x3D;build –prefix&#x3D; –conf-path&#x3D;conf&#x2F;nginx.conf –pid-path&#x3D;logs&#x2F;nginx.pid –htt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx with rtmp buiding">
+<meta property="og:url" content="http://example.com/2022/06/20/nginx-with-rtmp-buiding/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="nginx 编译支持rtmp直播模块Step 1 编译准备 编译前的准备工作，是下载可用的编译源码，编译平台本文选择使用centos 进行编译 .&#x2F;configure –builddir&#x3D;build –prefix&#x3D; –conf-path&#x3D;conf&#x2F;nginx.conf –pid-path&#x3D;logs&#x2F;nginx.pid –htt">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-06-20T14:02:13.000Z">
+<meta property="article:modified_time" content="2022-06-20T14:25:58.319Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="version 0.1.0">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -69,90 +74,66 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/21/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-20T17:55:54.434Z" itemprop="datePublished">Jun 21</time>
+        <section id="main"><article id="post-nginx-with-rtmp-buiding" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/20/nginx-with-rtmp-buiding/" class="article-date">
+  <time class="dt-published" datetime="2022-06-20T14:02:13.000Z" itemprop="datePublished">2022-06-20</time>
 </a>
-      
-    </header>
+    
   </div>
-</article>
-  
+  <div class="article-inner">
     
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/20/nginx-with-rtmp-buiding/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-20T14:02:13.000Z" itemprop="datePublished">Jun 20</time>
-</a>
-      
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/20/nginx-with-rtmp-buiding/">nginx with rtmp buiding</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      nginx with rtmp buiding
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-19T17:04:17.000Z" itemprop="datePublished">Jun 20</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/">我的第一篇blog</a>
-    </h1>
-  
+        <h1 id="nginx-编译支持rtmp直播模块"><a href="#nginx-编译支持rtmp直播模块" class="headerlink" title="nginx 编译支持rtmp直播模块"></a>nginx 编译支持rtmp直播模块</h1><p>Step 1 编译准备</p>
+<p>编译前的准备工作，是下载可用的编译源码，编译平台本文选择使用centos 进行编译</p>
+<p>.&#x2F;configure –builddir&#x3D;build –prefix&#x3D; <br>–conf-path&#x3D;conf&#x2F;nginx.conf –pid-path&#x3D;logs&#x2F;nginx.pid <br>–http-log-path&#x3D;logs&#x2F;access.log –error-log-path&#x3D;logs&#x2F;error.log <br>–sbin-path&#x3D;nginx.exe –http-client-body-temp-path&#x3D;temp&#x2F;client_body_temp <br>–http-proxy-temp-path&#x3D;temp&#x2F;proxy_temp <br>–http-fastcgi-temp-path&#x3D;temp&#x2F;fastcgi_temp <br>–with-cc-opt&#x3D;-DFD_SETSIZE&#x3D;1024 –with-pcre&#x3D;build&#x2F;lib&#x2F;pcre-8.39 <br>–with-zlib&#x3D;build&#x2F;lib&#x2F;zlib-1.2.8 –with-openssl&#x3D;build&#x2F;lib&#x2F;openssl-1.0.1s <br>–with-select_module –with-http_ssl_module –with-ipv6 <br>–with-http_sub_module <br>–add-module&#x3D;build&#x2F;lib&#x2F;nginx-rtmp-module</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/19/hello-world/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-19T15:45:31.794Z" itemprop="datePublished">Jun 19</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/19/hello-world/">Hello World</a>
-    </h1>
-  
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/06/20/nginx-with-rtmp-buiding/" data-id="cl4n1j911000194ugfshvafbd" data-title="nginx with rtmp buiding" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version-0-1-0/" rel="tag">version 0.1.0</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/06/21/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/06/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">我的第一篇blog</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
