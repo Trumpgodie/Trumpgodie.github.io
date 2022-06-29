@@ -15,8 +15,9 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220630000958814.png">
 <meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220630001200070.png">
+<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220630003834504.png">
 <meta property="article:published_time" content="2022-06-29T16:02:06.000Z">
-<meta property="article:modified_time" content="2022-06-29T16:26:55.832Z">
+<meta property="article:modified_time" content="2022-06-29T16:41:43.274Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="dns tencentCloud">
 <meta name="twitter:card" content="summary">
@@ -115,6 +116,11 @@
 <p>1:主机记录，比如www ,note, ,book等分别表示不同的主机名</p>
 <p>2：记录类型，常用的域名解析类型有四种，具体可以参考<strong>渗透测试</strong>的介绍，这里我们选择的默认的A记录，即正向解析记录，域名–&gt;&gt;地址解析</p>
 <p>3：记录值：填写我们想要将域名绑定到的ip即可</p>
+<p>4.添加记录完成后，记得单击“开始解析”，以便将解析记录同步到全球的dns服务器上（根据提示，这一过程短则24h，长则48h才能完成域名解析同步）</p>
+<p><img src="C:\Users\Thaygo\AppData\Roaming\Typora\typora-user-images\image-20220630003834504.png" alt="image-20220630003834504"></p>
+<p>实测，添加解析记录十分钟后，已经可以解析成功，测试方法可以通过下面命令，能ping通主机，说明域名解析已经成功同步</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping www.lvxn.xyz</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
